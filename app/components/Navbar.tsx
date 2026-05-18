@@ -40,6 +40,9 @@ const navItems: NavItem[] = [
       { label: "About Us", href: "/about-us" },
       { label: "Blog", href: "/blogs" },
       { label: "Contact", href: "/contact" },
+      { label: "Portfolio", href: "/portfolio" },
+      { label: "Gallary", href: "/gallary" },
+      { label: "Price Table", href: "/price-table" },
     ],
   },
   {
@@ -55,9 +58,9 @@ const navItems: NavItem[] = [
     label: "Admissions",
     href: "#",
     children: [
-      { label: "Apply Now", href: "#" },
-      { label: "Requirements", href: "#" },
-      { label: "Scholarships", href: "#" },
+      { label: "Apply Now", href: "/apply-kingstar" },
+      { label: "Campus Tour", href: "/campus-tour" },
+      { label: "Scholarships", href: "/scholarships" },
     ],
   },
   {
