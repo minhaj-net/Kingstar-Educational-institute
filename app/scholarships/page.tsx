@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ScholarshipsHero from "./scholarships-component/ScholarshipsHero";
 import ScholarshipsContent from "./scholarships-component/ScholarshipsContent";
+import ScholarshipsContactFAQ from "./scholarships-component/ScholarshipsContactFAQ";
 
 export const metadata: Metadata = {
   title: "Scholarships",
@@ -16,6 +17,9 @@ export default function ScholarshipsPage() {
 
       {/* ── Scholarships Sources + Requirements + Featured Student ── */}
       <ScholarshipsContent />
+
+      {/* ── Contact For Scholarship + FAQ ── */}
+      <ScholarshipsContactFAQ />
     </>
   );
 }

@@ -65,30 +65,30 @@ const navItems: NavItem[] = [
   },
   {
     label: "Courses",
-    href: "#",
-    children: [
-      { label: "Undergraduate", href: "#" },
-      { label: "Postgraduate", href: "#" },
-      { label: "Online", href: "#" },
-    ],
+    href: "courses",
+    // children: [
+    //   { label: "Courses", href: "courses" },
+    //   { label: "Postgraduate", href: "#" },
+    //   { label: "Online", href: "#" },
+    // ],
   },
   {
     label: "Athletics",
-    href: "#",
-    children: [
-      { label: "Sports", href: "#" },
-      { label: "Teams", href: "#" },
-      { label: "Facilities", href: "#" },
-    ],
+    href: "athletics",
+    // children: [
+    //   { label: "Sports", href: "#" },
+    //   { label: "Teams", href: "#" },
+    //   { label: "Facilities", href: "#" },
+    // ],
   },
   {
     label: "University Life",
     href: "#",
-    children: [
-      { label: "Campus Life", href: "#" },
-      { label: "Housing", href: "#" },
-      { label: "Student Services", href: "#" },
-    ],
+    // children: [
+    //   { label: "Campus Life", href: "#" },
+    //   { label: "Housing", href: "#" },
+    //   { label: "Student Services", href: "#" },
+    // ],
   },
 ];
 

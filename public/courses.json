@@ -1,0 +1,194 @@
+[
+  {
+    "id": "ACC101",
+    "title": "Introduction to Financial Accounting",
+    "department": "Business Administration",
+    "campus": "KU2 Hill",
+    "level": "Undergraduate",
+    "instructor": "Carol Dawson (PhD)",
+    "semester": "Fall 2018",
+    "credit": "4.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
+    "description": "If you're an educational professional who are looking to progress into management and consultancy, or an educational planning or development role, this is the best degree for you.",
+    "body": "Provided by the KU Institute of Education, this programme is available by distance learning, allowing you to study flexibly while balancing work and personal lifes.\n\nThe MSc Finance (EG. Banking) deepens your understanding of banks and financial markets, and how they relate to performance. It will help you to advance your career in finance and policy.",
+    "topics": ["Banking", "Economic Policy", "Financial Sector Management", "Quantitative Finance"],
+    "schedule": [
+      {
+        "time": "9:00am – 11:00am",
+        "place": "KU2 Hill",
+        "room": "203",
+        "dateRange": "Aug 21, 2018 – Dec 15, 2018",
+        "instructor": "Carol Dawson (PhD)"
+      }
+    ]
+  },
+  {
+    "id": "ACC201",
+    "title": "Introduction to Managerial Accounting",
+    "department": "Business Administration",
+    "campus": "KU2 Hill",
+    "level": "Graduate",
+    "instructor": "John Hagensy (PhD)",
+    "semester": "Fall 2018",
+    "credit": "3.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+    "description": "This course provides graduate students with a comprehensive understanding of managerial accounting principles and their application in modern business decision-making environments.",
+    "body": "Students will explore cost behavior, budgeting, and performance evaluation techniques used by managers to plan and control business operations effectively.\n\nThe course emphasizes practical application through case studies and real-world scenarios, preparing students for leadership roles in financial management and strategic planning.",
+    "topics": ["Cost Analysis", "Budgeting & Forecasting", "Performance Measurement", "Decision Making"],
+    "schedule": [
+      {
+        "time": "10:00am – 12:00pm",
+        "place": "KU2 Hill",
+        "room": "105",
+        "dateRange": "Aug 21, 2018 – Dec 15, 2018",
+        "instructor": "John Hagensy (PhD)"
+      }
+    ]
+  },
+  {
+    "id": "ACC402",
+    "title": "Intermediate Accounting I",
+    "department": "Business Administration",
+    "campus": "KU2 Hill",
+    "level": "Undergraduate",
+    "instructor": "Sarah Miller (PhD)",
+    "semester": "Fall 2018",
+    "credit": "3.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80",
+    "description": "An in-depth study of financial accounting theory and practice, covering the conceptual framework, income measurement, and asset valuation for undergraduate business students.",
+    "body": "This course builds upon foundational accounting knowledge to explore complex topics including revenue recognition, inventory valuation methods, and long-term asset accounting.\n\nStudents will develop proficiency in preparing and analyzing financial statements in accordance with generally accepted accounting principles, equipping them for professional accounting careers.",
+    "topics": ["Revenue Recognition", "Inventory Valuation", "Asset Accounting", "Financial Statements"],
+    "schedule": [
+      {
+        "time": "1:00pm – 3:00pm",
+        "place": "KU2 Hill",
+        "room": "210",
+        "dateRange": "Aug 21, 2018 – Dec 15, 2018",
+        "instructor": "Sarah Miller (PhD)"
+      }
+    ]
+  },
+  {
+    "id": "FIN301",
+    "title": "Corporate Finance",
+    "department": "Finance Department",
+    "campus": "Main Campus",
+    "level": "Graduate",
+    "instructor": "Robert Chen (PhD)",
+    "semester": "Spring 2019",
+    "credit": "4.000",
+    "method": "Seminar",
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80",
+    "description": "A rigorous graduate-level exploration of corporate financial theory and practice, covering capital structure, valuation, and strategic financial decision-making in global markets.",
+    "body": "This seminar examines the financial decisions made by corporations, including investment policy, financing policy, and dividend policy, with emphasis on value creation for shareholders.\n\nParticipants will engage with cutting-edge research and real-world case studies from leading corporations, developing the analytical skills needed for senior finance roles in industry and consulting.",
+    "topics": ["Capital Structure", "Valuation Methods", "Risk Management", "Mergers & Acquisitions"],
+    "schedule": [
+      {
+        "time": "2:00pm – 5:00pm",
+        "place": "Main Campus",
+        "room": "301",
+        "dateRange": "Jan 15, 2019 – May 10, 2019",
+        "instructor": "Robert Chen (PhD)"
+      }
+    ]
+  },
+  {
+    "id": "MKT201",
+    "title": "Marketing Principles",
+    "department": "Marketing Department",
+    "campus": "North Campus",
+    "level": "Undergraduate",
+    "instructor": "Emily Watson (PhD)",
+    "semester": "Fall 2018",
+    "credit": "3.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=600&q=80",
+    "description": "An introductory course covering the fundamental principles of marketing, consumer behavior, and the strategic frameworks used to develop effective marketing campaigns.",
+    "body": "Students will learn the core concepts of the marketing mix — product, price, place, and promotion — and how these elements are integrated to create compelling value propositions for target markets.\n\nThrough hands-on projects and industry case studies, students will develop practical skills in market research, brand strategy, and digital marketing that are immediately applicable in today's competitive business landscape.",
+    "topics": ["Marketing Mix", "Consumer Behavior", "Brand Strategy", "Digital Marketing"],
+    "schedule": [
+      {
+        "time": "9:00am – 10:30am",
+        "place": "North Campus",
+        "room": "115",
+        "dateRange": "Aug 21, 2018 – Dec 15, 2018",
+        "instructor": "Emily Watson (PhD)"
+      }
+    ]
+  },
+  {
+    "id": "CS101",
+    "title": "Introduction to Computer Science",
+    "department": "Computer Science",
+    "campus": "Online",
+    "level": "Undergraduate",
+    "instructor": "David Park (PhD)",
+    "semester": "Fall 2018",
+    "credit": "4.000",
+    "method": "Online",
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80",
+    "description": "A foundational online course introducing students to computational thinking, programming fundamentals, and the core principles that underpin modern computer science.",
+    "body": "This course provides a broad introduction to computer science through hands-on programming exercises using Python, covering algorithms, data structures, and problem-solving strategies.\n\nDelivered entirely online with interactive labs and weekly live sessions, the course is designed to be accessible to students with no prior programming experience while building a solid foundation for advanced study.",
+    "topics": ["Algorithms", "Data Structures", "Python Programming", "Computational Thinking"],
+    "schedule": [
+      {
+        "time": "Asynchronous + Live Q&A Fridays 3:00pm",
+        "place": "Online",
+        "room": "Virtual",
+        "dateRange": "Aug 21, 2018 – Dec 15, 2018",
+        "instructor": "David Park (PhD)"
+      }
+    ]
+  },
+  {
+    "id": "MGT401",
+    "title": "Strategic Management",
+    "department": "Business Administration",
+    "campus": "KU2 Hill",
+    "level": "Graduate",
+    "instructor": "James Wilson (PhD)",
+    "semester": "Spring 2019",
+    "credit": "3.000",
+    "method": "Seminar",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80",
+    "description": "An advanced graduate seminar examining the formulation and implementation of organizational strategy, competitive dynamics, and leadership in complex business environments.",
+    "body": "Students will analyze how organizations create and sustain competitive advantage through strategic positioning, resource allocation, and innovation, drawing on frameworks from leading strategy scholars.\n\nThe seminar format encourages deep engagement with real-world strategic challenges through executive case discussions, guest speakers from industry, and a capstone consulting project with a live client organization.",
+    "topics": ["Competitive Strategy", "Corporate Governance", "Innovation Management", "Global Strategy"],
+    "schedule": [
+      {
+        "time": "6:00pm – 9:00pm",
+        "place": "KU2 Hill",
+        "room": "401",
+        "dateRange": "Jan 15, 2019 – May 10, 2019",
+        "instructor": "James Wilson (PhD)"
+      }
+    ]
+  },
+  {
+    "id": "ECO201",
+    "title": "Microeconomics",
+    "department": "Economics Department",
+    "campus": "Main Campus",
+    "level": "Undergraduate",
+    "instructor": "Lisa Brown (PhD)",
+    "semester": "Fall 2018",
+    "credit": "3.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&q=80",
+    "description": "A comprehensive introduction to microeconomic theory, exploring how individuals and firms make decisions and how markets coordinate economic activity in a modern economy.",
+    "body": "This course covers the fundamental tools of microeconomic analysis including supply and demand, elasticity, consumer theory, production and cost, and market structures from perfect competition to monopoly.\n\nStudents will apply economic reasoning to real-world policy questions and business decisions, developing the analytical framework needed for advanced study in economics, business, and public policy.",
+    "topics": ["Supply & Demand", "Consumer Theory", "Market Structures", "Game Theory"],
+    "schedule": [
+      {
+        "time": "11:00am – 12:30pm",
+        "place": "Main Campus",
+        "room": "220",
+        "dateRange": "Aug 21, 2018 – Dec 15, 2018",
+        "instructor": "Lisa Brown (PhD)"
+      }
+    ]
+  }
+]
