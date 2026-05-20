@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "day": "17",
+    "month": "DEC",
+    "title": "Fintech & Key Investment Conference",
+    "time": "1:00 pm – 1:00 pm",
+    "location": "Kingster Grand Hall",
+    "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=700&q=80"
+  },
+  {
+    "id": 2,
+    "day": "04",
+    "month": "NOV",
+    "title": "Sport Management Information Webinar",
+    "time": "1:00 pm – 1:00 pm",
+    "location": "Kingster Grand Hall",
+    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=700&q=80"
+  },
+  {
+    "id": 3,
+    "day": "11",
+    "month": "SEP",
+    "title": "Planning and Facilitating Effective Meetings",
+    "time": "8:00 am – 8:00 am",
+    "location": "Kingster Grand Hall",
+    "image": "https://images.unsplash.com/photo-1562774053-701939374585?w=700&q=80"
+  },
+  {
+    "id": 4,
+    "day": "02",
+    "month": "SEP",
+    "title": "Asia Pacific Studies Fall Festival",
+    "time": "8:00 am – 8:00 am",
+    "location": "Kingster Grand Hall",
+    "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80"
+  },
+  {
+    "id": 5,
+    "day": "07",
+    "month": "JAN",
+    "title": "Reunion Event : Kingster's Alumni Golf Tour",
+    "time": "7:00 am – 7:00 am",
+    "location": "Kingster Grand Hall",
+    "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=700&q=80"
+  },
+  {
+    "id": 6,
+    "day": "01",
+    "month": "JAN",
+    "title": "Kingster's Alumni Hot Air Ballon Trip in Turkey",
+    "time": "10:00 am – 10:00 am",
+    "location": "Kingster Grand Hall",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80"
+  }
+]

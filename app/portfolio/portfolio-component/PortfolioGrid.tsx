@@ -186,15 +186,12 @@ export default function PortfolioGrid() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14">
 
         {/* ── Filter bar ── */}
-        <div
-          className="flex items-center justify-center mb-10"
-          data-aos="fade-down"
-        >
+        <div className="mb-10 overflow-x-auto scrollbar-hide" data-aos="fade-down">
           <div
             ref={filterBarRef}
-            className="relative flex items-center gap-0 border-b border-gray-200 pb-0"
+            className="relative flex items-center border-b border-gray-200 min-w-max mx-auto w-fit"
           >
-            {/* Sliding active pill (background) */}
+            {/* Sliding active underline pill */}
             <span
               ref={activePillRef}
               className="absolute bottom-0 h-0.5 bg-[#1a2e5a] transition-none rounded-full"
@@ -206,7 +203,7 @@ export default function PortfolioGrid() {
             <button
               data-filter={FILTER_ALL}
               onClick={() => applyFilter(FILTER_ALL)}
-              className={`relative px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold tracking-widest uppercase transition-colors duration-200
+              className={`relative flex-shrink-0 px-3 sm:px-5 py-2.5 text-xs sm:text-sm font-bold tracking-widest uppercase transition-colors duration-200
                 ${activeFilter === FILTER_ALL ? "text-[#1a2e5a]" : "text-gray-400 hover:text-gray-700"}`}
             >
               All
@@ -218,7 +215,7 @@ export default function PortfolioGrid() {
                 key={cat}
                 data-filter={cat}
                 onClick={() => applyFilter(cat)}
-                className={`relative px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold tracking-widest uppercase transition-colors duration-200
+                className={`relative flex-shrink-0 px-3 sm:px-5 py-2.5 text-xs sm:text-sm font-bold tracking-widest uppercase transition-colors duration-200
                   ${activeFilter === cat ? "text-[#1a2e5a]" : "text-gray-400 hover:text-gray-700"}`}
               >
                 {cat}

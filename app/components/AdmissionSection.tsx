@@ -141,6 +141,7 @@ export default function AdmissionSection() {
               className="object-cover"
               priority
             />
+            <div className="absolute inset-0 bg-black/70" />
 
           {/* Content */}
           <div
@@ -171,7 +172,7 @@ export default function AdmissionSection() {
             <div className="mt-2">
               <Link
                 ref={btnRef}
-                href="#"
+                href="/apply-kingstar"
                 className="inline-block bg-[#4caf50] hover:bg-[#43a047] text-white font-semibold px-8 py-3 text-sm sm:text-base transition-colors duration-300 rounded-sm shadow-lg shadow-green-900/30 animate__animated animate__fadeInUp"
               >
                 Apply Now

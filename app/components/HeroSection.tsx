@@ -37,7 +37,7 @@ const slides: Slide[] = [
     eyebrow: "Kingsters has more than",
     heading: "180 Majors & Minors",
     cta: "Take A Tour",
-    ctaHref: "#",
+    ctaHref: "/campus-tour",
     // ↓ Replace with your own image: "/images/hero-1.jpg"
     image: "/slide-1.jpg",
     gradient: "linear-gradient(135deg, #1a2e5a 0%, #2d4a8a 40%, #3a5fa0 70%, #1a3a6a 100%)",
@@ -47,7 +47,7 @@ const slides: Slide[] = [
     eyebrow: "World-class education with",
     heading: "500+ Expert Faculty",
     cta: "Meet Our Faculty",
-    ctaHref: "#",
+    ctaHref: "/about-us",
     // ↓ Replace with your own image: "/images/hero-2.jpg"
     image: "/slide-2.jpg",
     gradient: "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
@@ -57,7 +57,7 @@ const slides: Slide[] = [
     eyebrow: "Join a community of",
     heading: "25,000 Students Worldwide",
     cta: "Apply Now",
-    ctaHref: "#",
+    ctaHref: "/apply-kingstar",
     // ↓ Replace with your own image: "/images/hero-3.jpg"
     image: "/slide-3.jpg",
     gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
@@ -67,7 +67,7 @@ const slides: Slide[] = [
     eyebrow: "Ranked among the top",
     heading: "Universities Globally",
     cta: "Explore Rankings",
-    ctaHref: "#",
+    ctaHref: "/about-us",
     // ↓ Replace with your own image: "/images/hero-4.jpg"
     image: "/slide-4.jpg",
     gradient: "linear-gradient(135deg, #0d1b2a 0%, #1b2838 40%, #1e3a5f 100%)",

@@ -243,7 +243,15 @@ export default function Footer() {
                 {col.links.map((link) => (
                   <li key={link}>
                     <Link
-                      href="#"
+                      href={
+                        link === "Apply For Admissions" ? "/apply-kingstar" :
+                        link === "Canvas" ? "/portal" :
+                        link === "Library" ? "/university-life" :
+                        link === "Alumni" ? "/alumni" :
+                        link === "Pay My Tuition" ? "/portal" :
+                        link === "Academic" ? "/courses" :
+                        "/"
+                      }
                       className="text-white/55 text-sm hover:text-white hover:pl-1.5 transition-all duration-200 inline-block"
                     >
                       {link}

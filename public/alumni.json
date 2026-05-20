@@ -1,0 +1,57 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "day": "17",
+      "month": "DEC",
+      "title": "Fintech & Key Investment Conference",
+      "time": "1:00 pm – 1:00 pm",
+      "location": "Kingstar Grand Hall",
+      "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80"
+    },
+    {
+      "id": 2,
+      "day": "04",
+      "month": "NOV",
+      "title": "Sport Management Information Webinar",
+      "time": "1:00 pm – 1:00 pm",
+      "location": "Kingstar Grand Hall",
+      "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&q=80"
+    },
+    {
+      "id": 3,
+      "day": "11",
+      "month": "SEP",
+      "title": "Planning and Facilitating Effective Meetings",
+      "time": "8:00 am – 8:00 am",
+      "location": "Kingstar Grand Hall",
+      "image": "https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80"
+    }
+  ],
+  "updates": [
+    {
+      "id": 1,
+      "date": "JUNE 6, 2016",
+      "category": "BLOG",
+      "title": "Professor Albert joint research on mobile money in Tanzania",
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80",
+      "slug": "#"
+    },
+    {
+      "id": 2,
+      "date": "JUNE 6, 2016",
+      "category": "MASONRY",
+      "title": "A Global MBA for the next generation of business leaders",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80",
+      "slug": "#"
+    },
+    {
+      "id": 3,
+      "date": "JUNE 6, 2016",
+      "category": "BLOG",
+      "title": "Professor Tom comments on voluntary recalls by snack brands",
+      "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80",
+      "slug": "#"
+    }
+  ]
+}

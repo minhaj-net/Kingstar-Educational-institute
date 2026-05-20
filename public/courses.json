@@ -13,15 +13,7 @@
     "description": "If you're an educational professional who are looking to progress into management and consultancy, or an educational planning or development role, this is the best degree for you.",
     "body": "Provided by the KU Institute of Education, this programme is available by distance learning, allowing you to study flexibly while balancing work and personal lifes.\n\nThe MSc Finance (EG. Banking) deepens your understanding of banks and financial markets, and how they relate to performance. It will help you to advance your career in finance and policy.",
     "topics": ["Banking", "Economic Policy", "Financial Sector Management", "Quantitative Finance"],
-    "schedule": [
-      {
-        "time": "9:00am – 11:00am",
-        "place": "KU2 Hill",
-        "room": "203",
-        "dateRange": "Aug 21, 2018 – Dec 15, 2018",
-        "instructor": "Carol Dawson (PhD)"
-      }
-    ]
+    "schedule": [{ "time": "9:00am – 11:00am", "place": "KU2 Hill", "room": "203", "dateRange": "Aug 21, 2018 – Dec 15, 2018", "instructor": "Carol Dawson (PhD)" }]
   },
   {
     "id": "ACC201",
@@ -37,15 +29,7 @@
     "description": "This course provides graduate students with a comprehensive understanding of managerial accounting principles and their application in modern business decision-making environments.",
     "body": "Students will explore cost behavior, budgeting, and performance evaluation techniques used by managers to plan and control business operations effectively.\n\nThe course emphasizes practical application through case studies and real-world scenarios, preparing students for leadership roles in financial management and strategic planning.",
     "topics": ["Cost Analysis", "Budgeting & Forecasting", "Performance Measurement", "Decision Making"],
-    "schedule": [
-      {
-        "time": "10:00am – 12:00pm",
-        "place": "KU2 Hill",
-        "room": "105",
-        "dateRange": "Aug 21, 2018 – Dec 15, 2018",
-        "instructor": "John Hagensy (PhD)"
-      }
-    ]
+    "schedule": [{ "time": "10:00am – 12:00pm", "place": "KU2 Hill", "room": "105", "dateRange": "Aug 21, 2018 – Dec 15, 2018", "instructor": "John Hagensy (PhD)" }]
   },
   {
     "id": "ACC402",
@@ -61,15 +45,7 @@
     "description": "An in-depth study of financial accounting theory and practice, covering the conceptual framework, income measurement, and asset valuation for undergraduate business students.",
     "body": "This course builds upon foundational accounting knowledge to explore complex topics including revenue recognition, inventory valuation methods, and long-term asset accounting.\n\nStudents will develop proficiency in preparing and analyzing financial statements in accordance with generally accepted accounting principles, equipping them for professional accounting careers.",
     "topics": ["Revenue Recognition", "Inventory Valuation", "Asset Accounting", "Financial Statements"],
-    "schedule": [
-      {
-        "time": "1:00pm – 3:00pm",
-        "place": "KU2 Hill",
-        "room": "210",
-        "dateRange": "Aug 21, 2018 – Dec 15, 2018",
-        "instructor": "Sarah Miller (PhD)"
-      }
-    ]
+    "schedule": [{ "time": "1:00pm – 3:00pm", "place": "KU2 Hill", "room": "210", "dateRange": "Aug 21, 2018 – Dec 15, 2018", "instructor": "Sarah Miller (PhD)" }]
   },
   {
     "id": "FIN301",
@@ -85,15 +61,7 @@
     "description": "A rigorous graduate-level exploration of corporate financial theory and practice, covering capital structure, valuation, and strategic financial decision-making in global markets.",
     "body": "This seminar examines the financial decisions made by corporations, including investment policy, financing policy, and dividend policy, with emphasis on value creation for shareholders.\n\nParticipants will engage with cutting-edge research and real-world case studies from leading corporations, developing the analytical skills needed for senior finance roles in industry and consulting.",
     "topics": ["Capital Structure", "Valuation Methods", "Risk Management", "Mergers & Acquisitions"],
-    "schedule": [
-      {
-        "time": "2:00pm – 5:00pm",
-        "place": "Main Campus",
-        "room": "301",
-        "dateRange": "Jan 15, 2019 – May 10, 2019",
-        "instructor": "Robert Chen (PhD)"
-      }
-    ]
+    "schedule": [{ "time": "2:00pm – 5:00pm", "place": "Main Campus", "room": "301", "dateRange": "Jan 15, 2019 – May 10, 2019", "instructor": "Robert Chen (PhD)" }]
   },
   {
     "id": "MKT201",
@@ -109,15 +77,7 @@
     "description": "An introductory course covering the fundamental principles of marketing, consumer behavior, and the strategic frameworks used to develop effective marketing campaigns.",
     "body": "Students will learn the core concepts of the marketing mix — product, price, place, and promotion — and how these elements are integrated to create compelling value propositions for target markets.\n\nThrough hands-on projects and industry case studies, students will develop practical skills in market research, brand strategy, and digital marketing that are immediately applicable in today's competitive business landscape.",
     "topics": ["Marketing Mix", "Consumer Behavior", "Brand Strategy", "Digital Marketing"],
-    "schedule": [
-      {
-        "time": "9:00am – 10:30am",
-        "place": "North Campus",
-        "room": "115",
-        "dateRange": "Aug 21, 2018 – Dec 15, 2018",
-        "instructor": "Emily Watson (PhD)"
-      }
-    ]
+    "schedule": [{ "time": "9:00am – 10:30am", "place": "North Campus", "room": "115", "dateRange": "Aug 21, 2018 – Dec 15, 2018", "instructor": "Emily Watson (PhD)" }]
   },
   {
     "id": "CS101",
@@ -133,15 +93,7 @@
     "description": "A foundational online course introducing students to computational thinking, programming fundamentals, and the core principles that underpin modern computer science.",
     "body": "This course provides a broad introduction to computer science through hands-on programming exercises using Python, covering algorithms, data structures, and problem-solving strategies.\n\nDelivered entirely online with interactive labs and weekly live sessions, the course is designed to be accessible to students with no prior programming experience while building a solid foundation for advanced study.",
     "topics": ["Algorithms", "Data Structures", "Python Programming", "Computational Thinking"],
-    "schedule": [
-      {
-        "time": "Asynchronous + Live Q&A Fridays 3:00pm",
-        "place": "Online",
-        "room": "Virtual",
-        "dateRange": "Aug 21, 2018 – Dec 15, 2018",
-        "instructor": "David Park (PhD)"
-      }
-    ]
+    "schedule": [{ "time": "Asynchronous + Live Q&A Fridays 3:00pm", "place": "Online", "room": "Virtual", "dateRange": "Aug 21, 2018 – Dec 15, 2018", "instructor": "David Park (PhD)" }]
   },
   {
     "id": "MGT401",
@@ -157,15 +109,7 @@
     "description": "An advanced graduate seminar examining the formulation and implementation of organizational strategy, competitive dynamics, and leadership in complex business environments.",
     "body": "Students will analyze how organizations create and sustain competitive advantage through strategic positioning, resource allocation, and innovation, drawing on frameworks from leading strategy scholars.\n\nThe seminar format encourages deep engagement with real-world strategic challenges through executive case discussions, guest speakers from industry, and a capstone consulting project with a live client organization.",
     "topics": ["Competitive Strategy", "Corporate Governance", "Innovation Management", "Global Strategy"],
-    "schedule": [
-      {
-        "time": "6:00pm – 9:00pm",
-        "place": "KU2 Hill",
-        "room": "401",
-        "dateRange": "Jan 15, 2019 – May 10, 2019",
-        "instructor": "James Wilson (PhD)"
-      }
-    ]
+    "schedule": [{ "time": "6:00pm – 9:00pm", "place": "KU2 Hill", "room": "401", "dateRange": "Jan 15, 2019 – May 10, 2019", "instructor": "James Wilson (PhD)" }]
   },
   {
     "id": "ECO201",
@@ -181,14 +125,198 @@
     "description": "A comprehensive introduction to microeconomic theory, exploring how individuals and firms make decisions and how markets coordinate economic activity in a modern economy.",
     "body": "This course covers the fundamental tools of microeconomic analysis including supply and demand, elasticity, consumer theory, production and cost, and market structures from perfect competition to monopoly.\n\nStudents will apply economic reasoning to real-world policy questions and business decisions, developing the analytical framework needed for advanced study in economics, business, and public policy.",
     "topics": ["Supply & Demand", "Consumer Theory", "Market Structures", "Game Theory"],
-    "schedule": [
-      {
-        "time": "11:00am – 12:30pm",
-        "place": "Main Campus",
-        "room": "220",
-        "dateRange": "Aug 21, 2018 – Dec 15, 2018",
-        "instructor": "Lisa Brown (PhD)"
-      }
-    ]
+    "schedule": [{ "time": "11:00am – 12:30pm", "place": "Main Campus", "room": "220", "dateRange": "Aug 21, 2018 – Dec 15, 2018", "instructor": "Lisa Brown (PhD)" }]
+  },
+  {
+    "id": "LAW301",
+    "title": "Business Law & Ethics",
+    "department": "Law Department",
+    "campus": "Main Campus",
+    "level": "Undergraduate",
+    "instructor": "Michael Torres (JD)",
+    "semester": "Fall 2018",
+    "credit": "3.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80",
+    "description": "An essential course for business students covering the legal framework governing commercial transactions, corporate governance, and ethical decision-making in professional environments.",
+    "body": "Students will examine contract law, tort liability, intellectual property, and employment law as they apply to business operations, gaining the legal literacy needed to navigate complex commercial environments.\n\nThe course integrates ethical frameworks with legal analysis, preparing students to make principled decisions in situations where legal compliance and moral responsibility intersect.",
+    "topics": ["Contract Law", "Corporate Governance", "Intellectual Property", "Employment Law"],
+    "schedule": [{ "time": "2:00pm – 3:30pm", "place": "Main Campus", "room": "118", "dateRange": "Aug 21, 2018 – Dec 15, 2018", "instructor": "Michael Torres (JD)" }]
+  },
+  {
+    "id": "PSY101",
+    "title": "Introduction to Psychology",
+    "department": "Psychology Department",
+    "campus": "North Campus",
+    "level": "Undergraduate",
+    "instructor": "Angela Foster (PhD)",
+    "semester": "Fall 2018",
+    "credit": "3.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80",
+    "description": "A broad survey of the science of psychology, exploring human behavior, mental processes, and the biological, social, and cultural factors that shape who we are.",
+    "body": "This course introduces students to the major areas of psychological science including perception, cognition, emotion, personality, behavior, and social influence through engaging lectures and interactive discussions.\n\nStudents will develop critical thinking skills by evaluating psychological research and applying theoretical concepts to real-world situations, laying the groundwork for advanced study in psychology and related fields.",
+    "topics": ["Cognitive Psychology", "Social Behavior", "Developmental Psychology", "Research Methods"],
+    "schedule": [{ "time": "8:00am – 9:30am", "place": "North Campus", "room": "205", "dateRange": "Aug 21, 2018 – Dec 15, 2018", "instructor": "Angela Foster (PhD)" }]
+  },
+  {
+    "id": "ENG201",
+    "title": "Academic Writing & Communication",
+    "department": "English Department",
+    "campus": "Main Campus",
+    "level": "Undergraduate",
+    "instructor": "Patricia Lane (MA)",
+    "semester": "Fall 2018",
+    "credit": "3.000",
+    "method": "Workshop",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80",
+    "description": "A practical workshop-based course developing the academic writing, critical reading, and oral communication skills essential for success in university and professional settings.",
+    "body": "Students will practice the full writing process — from brainstorming and outlining to drafting, revising, and editing — producing a portfolio of academic essays, research reports, and professional documents.\n\nThe workshop format provides intensive peer feedback and instructor coaching, helping each student develop a confident, clear, and persuasive writing voice suited to academic and professional audiences.",
+    "topics": ["Essay Writing", "Research Skills", "Oral Presentation", "Critical Reading"],
+    "schedule": [{ "time": "10:00am – 11:30am", "place": "Main Campus", "room": "112", "dateRange": "Aug 21, 2018 – Dec 15, 2018", "instructor": "Patricia Lane (MA)" }]
+  },
+  {
+    "id": "BIO101",
+    "title": "Fundamentals of Biology",
+    "department": "Biology Department",
+    "campus": "Main Campus",
+    "level": "Undergraduate",
+    "instructor": "Dr. Kevin Nash (PhD)",
+    "semester": "Fall 2018",
+    "credit": "4.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1532094349884-543559c5f185?w=600&q=80",
+    "description": "An introductory exploration of life sciences covering cell biology, genetics, evolution, and ecology, providing the foundation for advanced study in biological and health sciences.",
+    "body": "This course surveys the major themes of modern biology, from the molecular machinery of the cell to the diversity of life on Earth, using a combination of lectures, laboratory exercises, and field observations.\n\nStudents will develop scientific reasoning skills and gain hands-on experience with biological techniques, preparing them for careers in medicine, research, environmental science, and biotechnology.",
+    "topics": ["Cell Biology", "Genetics", "Evolution", "Ecology"],
+    "schedule": [{ "time": "9:00am – 10:30am", "place": "Main Campus", "room": "Lab 3", "dateRange": "Aug 21, 2018 – Dec 15, 2018", "instructor": "Dr. Kevin Nash (PhD)" }]
+  },
+  {
+    "id": "PHY201",
+    "title": "Physics for Engineers",
+    "department": "Physics Department",
+    "campus": "KU2 Hill",
+    "level": "Undergraduate",
+    "instructor": "Dr. Alan Reed (PhD)",
+    "semester": "Spring 2019",
+    "credit": "4.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=600&q=80",
+    "description": "A calculus-based physics course covering mechanics, thermodynamics, waves, and electromagnetism, designed specifically for students in engineering and applied science programs.",
+    "body": "Students will develop a rigorous understanding of classical physics principles and their application to engineering problems, supported by weekly problem-solving sessions and laboratory experiments.\n\nThe course emphasizes quantitative reasoning and mathematical modeling, equipping students with the physical intuition and analytical tools needed for success in advanced engineering coursework.",
+    "topics": ["Classical Mechanics", "Thermodynamics", "Electromagnetism", "Wave Physics"],
+    "schedule": [{ "time": "8:00am – 10:00am", "place": "KU2 Hill", "room": "Lab 7", "dateRange": "Jan 15, 2019 – May 10, 2019", "instructor": "Dr. Alan Reed (PhD)" }]
+  },
+  {
+    "id": "HIS101",
+    "title": "World History: Ancient to Modern",
+    "department": "History Department",
+    "campus": "North Campus",
+    "level": "Undergraduate",
+    "instructor": "Dr. Sandra Kim (PhD)",
+    "semester": "Fall 2018",
+    "credit": "3.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80",
+    "description": "A sweeping survey of world history from ancient civilizations to the modern era, examining the political, economic, social, and cultural forces that have shaped human societies.",
+    "body": "Students will trace the rise and fall of empires, the spread of religions and ideologies, the development of trade networks, and the emergence of the modern nation-state through primary sources and scholarly analysis.\n\nThe course develops historical thinking skills — including contextualization, causation, and comparison — that are valuable across disciplines and essential for informed citizenship in a globalized world.",
+    "topics": ["Ancient Civilizations", "Medieval History", "Age of Exploration", "Modern World"],
+    "schedule": [{ "time": "1:00pm – 2:30pm", "place": "North Campus", "room": "308", "dateRange": "Aug 21, 2018 – Dec 15, 2018", "instructor": "Dr. Sandra Kim (PhD)" }]
+  },
+  {
+    "id": "SOC201",
+    "title": "Introduction to Sociology",
+    "department": "Sociology Department",
+    "campus": "Main Campus",
+    "level": "Undergraduate",
+    "instructor": "Dr. Marcus Webb (PhD)",
+    "semester": "Spring 2019",
+    "credit": "3.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80",
+    "description": "An introduction to the sociological perspective, exploring how social structures, institutions, and cultural forces shape individual behavior and collective life in contemporary societies.",
+    "body": "Students will examine key sociological concepts including social stratification, race and ethnicity, gender, deviance, and social change, applying theoretical frameworks to understand everyday social phenomena.\n\nThrough readings, discussions, and a community-based research project, students will develop the sociological imagination — the ability to see personal experiences in their broader social and historical context.",
+    "topics": ["Social Stratification", "Race & Ethnicity", "Gender Studies", "Social Change"],
+    "schedule": [{ "time": "3:00pm – 4:30pm", "place": "Main Campus", "room": "215", "dateRange": "Jan 15, 2019 – May 10, 2019", "instructor": "Dr. Marcus Webb (PhD)" }]
+  },
+  {
+    "id": "ART301",
+    "title": "History of Art & Design",
+    "department": "Arts Department",
+    "campus": "North Campus",
+    "level": "Undergraduate",
+    "instructor": "Dr. Claire Fontaine (PhD)",
+    "semester": "Spring 2019",
+    "credit": "3.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?w=600&q=80",
+    "description": "A chronological survey of art and design from prehistoric cave paintings to contemporary digital media, exploring how visual culture reflects and shapes human experience across time and place.",
+    "body": "Students will develop visual literacy and critical analysis skills by examining major works of painting, sculpture, architecture, and design within their historical, cultural, and social contexts.\n\nThe course includes museum visits, studio critiques, and a research paper, encouraging students to engage directly with artworks and develop their own informed aesthetic perspectives.",
+    "topics": ["Art History", "Design Principles", "Visual Analysis", "Contemporary Art"],
+    "schedule": [{ "time": "11:00am – 12:30pm", "place": "North Campus", "room": "Art Studio 2", "dateRange": "Jan 15, 2019 – May 10, 2019", "instructor": "Dr. Claire Fontaine (PhD)" }]
+  },
+  {
+    "id": "CS301",
+    "title": "Database Management Systems",
+    "department": "Computer Science",
+    "campus": "KU2 Hill",
+    "level": "Undergraduate",
+    "instructor": "Dr. Raj Patel (PhD)",
+    "semester": "Spring 2019",
+    "credit": "4.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+    "description": "A comprehensive study of database design, implementation, and management, covering relational models, SQL, normalization, and modern database technologies used in industry.",
+    "body": "Students will design and implement relational databases using SQL, learning to model complex data relationships, optimize query performance, and ensure data integrity and security.\n\nThe course includes hands-on projects using industry-standard database systems, preparing students for roles as database administrators, data analysts, and software engineers in data-intensive organizations.",
+    "topics": ["Relational Databases", "SQL Programming", "Data Modeling", "Database Security"],
+    "schedule": [{ "time": "2:00pm – 4:00pm", "place": "KU2 Hill", "room": "CS Lab 2", "dateRange": "Jan 15, 2019 – May 10, 2019", "instructor": "Dr. Raj Patel (PhD)" }]
+  },
+  {
+    "id": "NUR101",
+    "title": "Foundations of Nursing",
+    "department": "Nursing Department",
+    "campus": "Main Campus",
+    "level": "Undergraduate",
+    "instructor": "Prof. Helen Grant (RN, MSN)",
+    "semester": "Fall 2018",
+    "credit": "4.000",
+    "method": "Clinical",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80",
+    "description": "An introductory clinical course establishing the foundational knowledge, skills, and professional values essential for safe and compassionate nursing practice in diverse healthcare settings.",
+    "body": "Students will learn fundamental nursing skills including patient assessment, medication administration, wound care, and documentation, practicing in simulation labs before clinical placements.\n\nThe course emphasizes patient-centered care, evidence-based practice, and interprofessional collaboration, preparing students for the complex and rewarding challenges of modern nursing.",
+    "topics": ["Patient Assessment", "Clinical Skills", "Evidence-Based Practice", "Healthcare Ethics"],
+    "schedule": [{ "time": "7:00am – 3:00pm (Clinical)", "place": "Main Campus", "room": "Sim Lab", "dateRange": "Aug 21, 2018 – Dec 15, 2018", "instructor": "Prof. Helen Grant (RN, MSN)" }]
+  },
+  {
+    "id": "ENV201",
+    "title": "Environmental Science",
+    "department": "Environmental Studies",
+    "campus": "Main Campus",
+    "level": "Undergraduate",
+    "instructor": "Dr. Olivia Green (PhD)",
+    "semester": "Spring 2019",
+    "credit": "3.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&q=80",
+    "description": "An interdisciplinary exploration of environmental systems, human impacts on the natural world, and the scientific, policy, and ethical dimensions of sustainability and conservation.",
+    "body": "Students will examine the Earth's major ecosystems, the causes and consequences of environmental degradation, and the scientific basis for climate change, drawing on biology, chemistry, and earth science.\n\nThe course integrates field work, data analysis, and policy case studies, empowering students to understand environmental challenges and contribute to evidence-based solutions as informed citizens and future professionals.",
+    "topics": ["Climate Science", "Ecosystem Ecology", "Environmental Policy", "Sustainability"],
+    "schedule": [{ "time": "10:00am – 11:30am", "place": "Main Campus", "room": "Field Lab", "dateRange": "Jan 15, 2019 – May 10, 2019", "instructor": "Dr. Olivia Green (PhD)" }]
+  },
+  {
+    "id": "MTH301",
+    "title": "Calculus & Analytical Geometry",
+    "department": "Mathematics Department",
+    "campus": "KU2 Hill",
+    "level": "Undergraduate",
+    "instructor": "Dr. Thomas Black (PhD)",
+    "semester": "Fall 2018",
+    "credit": "4.000",
+    "method": "Lecture",
+    "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80",
+    "description": "A rigorous introduction to differential and integral calculus with applications to geometry, physics, and engineering, providing the mathematical foundation for advanced STEM coursework.",
+    "body": "Students will master the concepts of limits, derivatives, and integrals, developing both computational fluency and conceptual understanding through problem sets, quizzes, and collaborative workshops.\n\nThe course emphasizes mathematical reasoning and proof, preparing students for advanced mathematics, physics, engineering, and economics courses that rely on calculus as a fundamental tool.",
+    "topics": ["Differential Calculus", "Integral Calculus", "Series & Sequences", "Multivariable Calculus"],
+    "schedule": [{ "time": "8:00am – 9:30am", "place": "KU2 Hill", "room": "302", "dateRange": "Aug 21, 2018 – Dec 15, 2018", "instructor": "Dr. Thomas Black (PhD)" }]
   }
 ]

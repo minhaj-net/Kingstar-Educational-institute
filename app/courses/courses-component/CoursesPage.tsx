@@ -167,12 +167,63 @@ function CourseCard({ course, index }: { course: Course; index: number }) {
   );
 }
 
+// ─── Pagination Component ─────────────────────────────────────────────────────
+
+const COURSES_PER_PAGE = 5;
+
+function Pagination({
+  current,
+  total,
+  onChange,
+}: {
+  current: number;
+  total: number;
+  onChange: (p: number) => void;
+}) {
+  const pages = Array.from({ length: total }, (_, i) => i + 1);
+  return (
+    <div className="flex items-center gap-2 flex-wrap mt-6">
+      <button
+        onClick={() => onChange(Math.max(1, current - 1))}
+        disabled={current === 1}
+        aria-label="Previous page"
+        className="w-9 h-9 flex items-center justify-center border border-gray-200 text-gray-500 hover:border-[#1a2e5a] hover:text-[#1a2e5a] disabled:opacity-40 disabled:cursor-not-allowed transition-colors duration-200 rounded-sm"
+      >
+        <ChevronDown size={14} className="rotate-90" />
+      </button>
+      {pages.map((p) => (
+        <button
+          key={p}
+          onClick={() => onChange(p)}
+          aria-current={p === current ? "page" : undefined}
+          className={`w-9 h-9 flex items-center justify-center text-sm font-semibold rounded-sm border transition-all duration-200
+            ${p === current
+              ? "bg-[#1a2e5a] text-white border-[#1a2e5a]"
+              : "border-gray-200 text-gray-600 hover:border-[#1a2e5a] hover:text-[#1a2e5a]"
+            }`}
+        >
+          {p}
+        </button>
+      ))}
+      <button
+        onClick={() => onChange(Math.min(total, current + 1))}
+        disabled={current === total}
+        aria-label="Next page"
+        className="w-9 h-9 flex items-center justify-center border border-gray-200 text-gray-500 hover:border-[#1a2e5a] hover:text-[#1a2e5a] disabled:opacity-40 disabled:cursor-not-allowed transition-colors duration-200 rounded-sm"
+      >
+        <ChevronDown size={14} className="-rotate-90" />
+      </button>
+    </div>
+  );
+}
+
 // ─── Main Component ───────────────────────────────────────────────────────────
 
 export default function CoursesPage() {
   const [allCourses, setAllCourses] = useState<Course[]>([]);
   const [displayed, setDisplayed] = useState<Course[]>([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const [draft, setDraft] = useState<Filters>({
     keywords: "",
@@ -249,6 +300,7 @@ export default function CoursesPage() {
     e.preventDefault();
     const results = filterCourses(allCourses, draft);
     setDisplayed(results);
+    setCurrentPage(1); // reset to first page on new search
 
     // Animate cards back in
     if (listRef.current) {
@@ -390,7 +442,7 @@ export default function CoursesPage() {
           <div ref={listRef}>
             {loading ? (
               <div className="flex flex-col gap-4">
-                {Array.from({ length: 4 }).map((_, i) => (
+                {Array.from({ length: 5 }).map((_, i) => (
                   <div key={i} className="bg-gray-100 animate-pulse h-36 rounded-sm" />
                 ))}
               </div>
@@ -399,20 +451,58 @@ export default function CoursesPage() {
                 <p className="text-lg font-semibold text-[#1a2e5a] mb-2">No courses found</p>
                 <p className="text-sm">Try adjusting your search filters.</p>
               </div>
-            ) : (
-              <div className="flex flex-col gap-4">
-                <p className="text-sm text-gray-500 mb-1">
-                  Showing{" "}
-                  <span className="font-semibold text-[#1a2e5a]">{displayed.length}</span>{" "}
-                  {displayed.length === 1 ? "course" : "courses"}
-                </p>
-                {displayed.map((course, i) => (
-                  <div key={course.id} className="course-card">
-                    <CourseCard course={course} index={i} />
-                  </div>
-                ))}
-              </div>
-            )}
+            ) : (() => {
+              const totalPages = Math.ceil(displayed.length / COURSES_PER_PAGE);
+              const paginated = displayed.slice(
+                (currentPage - 1) * COURSES_PER_PAGE,
+                currentPage * COURSES_PER_PAGE
+              );
+              return (
+                <div className="flex flex-col gap-4">
+                  {/* Count */}
+                  <p className="text-sm text-gray-500 mb-1">
+                    Showing{" "}
+                    <span className="font-semibold text-[#1a2e5a]">
+                      {(currentPage - 1) * COURSES_PER_PAGE + 1}–
+                      {Math.min(currentPage * COURSES_PER_PAGE, displayed.length)}
+                    </span>{" "}
+                    of{" "}
+                    <span className="font-semibold text-[#1a2e5a]">{displayed.length}</span>{" "}
+                    {displayed.length === 1 ? "course" : "courses"}
+                  </p>
+
+                  {/* Cards */}
+                  {paginated.map((course, i) => (
+                    <div key={course.id} className="course-card">
+                      <CourseCard course={course} index={i} />
+                    </div>
+                  ))}
+
+                  {/* Pagination */}
+                  {totalPages > 1 && (
+                    <Pagination
+                      current={currentPage}
+                      total={totalPages}
+                      onChange={(p) => {
+                        setCurrentPage(p);
+                        // Animate cards on page change
+                        requestAnimationFrame(() => {
+                          if (listRef.current) {
+                            gsap.fromTo(
+                              listRef.current.querySelectorAll(".course-card"),
+                              { y: 20, opacity: 0 },
+                              { y: 0, opacity: 1, duration: 0.4, stagger: 0.07, ease: "power2.out" }
+                            );
+                          }
+                        });
+                        // Scroll to top of list
+                        listRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+                      }}
+                    />
+                  )}
+                </div>
+              );
+            })()}
           </div>
 
         </div>

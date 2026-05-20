@@ -29,28 +29,28 @@ const services: ServiceCard[] = [
     title: "Education Services",
     description:
       "Kingster University was established by John Smith in 1920 for the public benefit and it is recognized.",
-    href: "#",
+    href: "/courses",
   },
   {
     icon: <Globe size={38} strokeWidth={1.3} />,
     title: "International Hubs",
     description:
       "Kingster University was established by John Smith in 1920 for the public benefit and it is recognized.",
-    href: "#",
+    href: "/about-us",
   },
   {
     icon: <GraduationCap size={38} strokeWidth={1.3} />,
     title: "Bachelor's and Master's",
     description:
       "Kingster University was established by John Smith in 1920 for the public benefit and it is recognized.",
-    href: "#",
+    href: "/courses",
   },
   {
     icon: <Building2 size={38} strokeWidth={1.3} />,
     title: "University Life",
     description:
       "Kingster University was established by John Smith in 1920 for the public benefit and it is recognized.",
-    href: "#",
+    href: "/university-life",
   },
 ];
 
@@ -239,7 +239,7 @@ export default function AboutSection() {
               {/* Read More */}
               <Link
                 ref={readMoreRef}
-                href="#"
+                href="/about-us"
                 className="inline-flex items-center gap-2 text-white font-semibold text-sm hover:text-[#4caf50] transition-colors duration-300 mt-1 w-fit group"
                 data-aos="fade-left"
                 data-aos-delay="260"
