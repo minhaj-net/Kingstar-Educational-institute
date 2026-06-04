@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Professor Albert Johnson",
+    "date": "JUNE 6, 2016",
+    "category": "BLOG",
+    "title": "Professor Albert joint research on mobile money in Tanzania",
+    "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80",
+    "slug": "professor-albert-research"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Sarah Williams",
+    "date": "JUNE 6, 2016",
+    "category": "MASONRY",
+    "title": "A Global MBA for the next generation of business leaders",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80",
+    "slug": "global-mba-business-leaders"
+  },
+  {
+    "id": 3,
+    "name": "Prof. Tom Richards",
+    "date": "JUNE 6, 2016",
+    "category": "BLOG",
+    "title": "Professor Tom comments on voluntary recalls by snack brands",
+    "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80",
+    "slug": "professor-tom-snack-recalls"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Emily Chen",
+    "date": "AUGUST 15, 2018",
+    "category": "RESEARCH",
+    "title": "New approaches to sustainable finance in emerging markets",
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+    "slug": "sustainable-finance-emerging"
+  },
+  {
+    "id": 5,
+    "name": "Prof. James Walker",
+    "date": "OCTOBER 20, 2018",
+    "category": "ALUMNI",
+    "title": "KU Alumni Connect Platform officially launched for 90,000 graduates",
+    "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+    "slug": "ku-alumni-connect-launch"
+  }
+]

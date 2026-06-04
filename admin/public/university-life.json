@@ -1,0 +1,104 @@
+[
+  {
+    "id": "dining-on-campus",
+    "title": "Dining On Campus",
+    "excerpt": "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Dudenmouth.",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80",
+    "category": "Campus Life",
+    "description": "Kingster University offers a diverse and vibrant dining experience across multiple locations on campus. From casual cafés to full-service dining halls, students have access to nutritious, delicious meals every day of the week.",
+    "body": "Our dining facilities serve thousands of students daily, offering a wide variety of cuisines including international dishes, vegetarian and vegan options, and locally sourced ingredients. We believe that good nutrition is the foundation of academic success.\n\nThe main dining hall, located at the heart of campus, features live cooking stations, a salad bar, a deli, and rotating seasonal menus. Students can use their meal plans at any of our 12 dining locations across campus.\n\nWe also host regular food festivals and cultural dining events that celebrate the diversity of our student community. From sushi nights to Mediterranean feasts, there is always something exciting happening in our dining halls.",
+    "highlights": ["12 dining locations across campus", "Vegetarian & vegan options daily", "Locally sourced seasonal ingredients", "Special dietary accommodations available"],
+    "hours": "Monday – Friday: 7:00am – 10:00pm | Saturday – Sunday: 8:00am – 9:00pm",
+    "contact": "dining@kingsterunl.edu",
+    "gallery": [
+      "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=600&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80",
+      "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=600&q=80"
+    ]
+  },
+  {
+    "id": "athletics",
+    "title": "Athletics",
+    "excerpt": "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Dudenmouth.",
+    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=700&q=80",
+    "category": "Sports",
+    "description": "Kingster University Athletics offers a comprehensive sports program with over 20 varsity teams, state-of-the-art facilities, and a passionate community of student-athletes who compete at the highest levels.",
+    "body": "Our athletic program is built on the belief that sports develop character, discipline, and teamwork — qualities that serve students throughout their lives. Whether you are a competitive athlete or a recreational sports enthusiast, there is a place for you in KU Athletics.\n\nWe offer varsity teams in basketball, soccer, swimming, track and field, tennis, volleyball, and many more. Our coaching staff includes former professional athletes and nationally recognized coaches who are dedicated to developing both athletic and academic excellence.\n\nBeyond varsity sports, we offer intramural leagues, fitness classes, and open recreation hours at our world-class sports complex. The KU Sports Center features an Olympic-size swimming pool, indoor courts, a climbing wall, and a fully equipped fitness center.",
+    "highlights": ["20+ varsity sports teams", "Olympic-size swimming pool", "State-of-the-art fitness center", "Intramural leagues for all skill levels"],
+    "hours": "Sports Complex: Monday – Sunday: 6:00am – 11:00pm",
+    "contact": "athletics@kingsterunl.edu",
+    "gallery": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
+      "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=600&q=80",
+      "https://images.unsplash.com/photo-1526676037777-05a232554f77?w=600&q=80"
+    ]
+  },
+  {
+    "id": "arts-and-culture",
+    "title": "Arts & Culture",
+    "excerpt": "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Dudenmouth.",
+    "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=700&q=80",
+    "category": "Culture",
+    "description": "The arts and cultural life at Kingster University is rich, diverse, and deeply integrated into the academic experience. From world-class performances to student-led exhibitions, creativity thrives on our campus.",
+    "body": "Kingster University is home to a vibrant arts community that includes theatre, music, visual arts, film, and dance. Our performing arts center hosts over 200 events each year, featuring student productions, faculty recitals, and visiting artists from around the world.\n\nThe KU Art Gallery showcases rotating exhibitions of student and professional artwork, providing a platform for emerging artists and fostering dialogue about contemporary issues through visual expression. Students can also participate in our artist-in-residence program, working alongside established artists in their studios.\n\nOur cultural programming celebrates the diversity of our campus community through festivals, film screenings, lectures, and workshops. The annual Cultural Showcase brings together student groups from over 50 countries to share their traditions, music, and cuisine.",
+    "highlights": ["200+ arts events per year", "KU Art Gallery with rotating exhibitions", "Artist-in-residence program", "Annual Cultural Showcase with 50+ countries"],
+    "hours": "Performing Arts Center: Tuesday – Sunday: 10:00am – 9:00pm",
+    "contact": "arts@kingsterunl.edu",
+    "gallery": [
+      "https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?w=600&q=80",
+      "https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&q=80",
+      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&q=80"
+    ]
+  },
+  {
+    "id": "information-technology",
+    "title": "Information Technology",
+    "excerpt": "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Dudenmouth.",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=700&q=80",
+    "category": "Technology",
+    "description": "Kingster University provides cutting-edge technology infrastructure and support services to ensure that every student has the digital tools they need to succeed in their academic and professional pursuits.",
+    "body": "Our Information Technology department manages a comprehensive digital ecosystem that supports learning, research, and campus operations. Students have access to high-speed Wi-Fi across the entire campus, including outdoor spaces, residence halls, and all academic buildings.\n\nThe KU Tech Hub provides free technical support, software licensing, and hardware loans to all enrolled students. Our computer labs are equipped with the latest hardware and software, including industry-standard tools for design, engineering, data science, and media production.\n\nWe also offer digital literacy workshops, coding bootcamps, and cybersecurity training to help students develop the technical skills demanded by today's employers. Our student technology ambassadors are available to provide peer support and guidance.",
+    "highlights": ["Campus-wide high-speed Wi-Fi", "Free software licensing for students", "24/7 tech support helpdesk", "Computer labs with industry software"],
+    "hours": "Tech Hub: Monday – Friday: 8:00am – 8:00pm | Saturday: 10:00am – 4:00pm",
+    "contact": "itsupport@kingsterunl.edu",
+    "gallery": [
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80"
+    ]
+  },
+  {
+    "id": "safety-and-security",
+    "title": "Safety and Security",
+    "excerpt": "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Dudenmouth.",
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80",
+    "category": "Safety",
+    "description": "The safety and security of our campus community is our highest priority. Kingster University maintains a comprehensive safety program that ensures students, faculty, and staff can live, learn, and work in a secure environment.",
+    "body": "Our Campus Safety department operates 24 hours a day, 7 days a week, 365 days a year. We employ trained security officers who patrol the campus on foot, bicycle, and vehicle, and we maintain a network of over 500 security cameras across all campus locations.\n\nThe KU Safe Walk program provides free escort services for students walking across campus at night. Our emergency notification system can reach all campus community members via text, email, and app notification within minutes of an incident.\n\nWe also offer regular safety workshops, self-defense classes, and bystander intervention training to empower students to contribute to a safe campus culture. Our Clery Act compliance ensures full transparency about campus crime statistics.",
+    "highlights": ["24/7 campus security patrols", "500+ security cameras on campus", "Safe Walk escort program", "Emergency notification system"],
+    "hours": "Campus Safety Office: Open 24/7",
+    "contact": "safety@kingsterunl.edu",
+    "gallery": [
+      "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80",
+      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80",
+      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&q=80"
+    ]
+  },
+  {
+    "id": "health-and-wellness",
+    "title": "Health & Wellness",
+    "excerpt": "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Dudenmouth.",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700&q=80",
+    "category": "Health",
+    "description": "Kingster University is committed to supporting the holistic health and wellbeing of every student. Our comprehensive health and wellness services address physical, mental, and emotional health needs.",
+    "body": "The KU Student Health Center provides primary care, preventive health services, immunizations, and specialist referrals to all enrolled students. Our team of physicians, nurses, and health educators are dedicated to keeping students healthy and helping them manage chronic conditions.\n\nMental health is a priority at Kingster University. Our Counseling and Psychological Services (CAPS) offers individual therapy, group counseling, crisis intervention, and psychiatric services. We also run peer support programs and mental health awareness campaigns throughout the academic year.\n\nOur Wellness Center offers yoga classes, meditation sessions, nutrition counseling, and stress management workshops. We believe that a healthy student is a successful student, and we invest in programs that support every dimension of wellbeing.",
+    "highlights": ["Primary care & specialist referrals", "Individual & group counseling (CAPS)", "Yoga, meditation & wellness classes", "Nutrition counseling & health coaching"],
+    "hours": "Health Center: Monday – Friday: 8:00am – 6:00pm | Urgent Care: 8:00am – 8:00pm",
+    "contact": "health@kingsterunl.edu",
+    "gallery": [
+      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
+      "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=600&q=80"
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+ {
+  "stats": {
+    "totalStudents": 12847,
+    "totalCourses": 20,
+    "totalInstructors": 64,
+    "totalRevenue": 284500,
+    "newStudentsThisMonth": 342,
+    "activeEvents": 6,
+    "totalBlogs": 10,
+    "totalPortfolio": 15,
+    "totalGallery": 14,
+    "totalAlumniEvents": 3,
+    "totalAlumniUpdates": 3
+  },
+  "recentStudents": [
+    { "id": 1, "name": "Alice Johnson", "email": "alice@example.com", "course": "Business Administration", "status": "active", "joined": "2024-01-15", "avatar": "" },
+    { "id": 2, "name": "Bob Smith", "email": "bob@example.com", "course": "Computer Science", "status": "active", "joined": "2024-01-14", "avatar": "" },
+    { "id": 3, "name": "Carol White", "email": "carol@example.com", "course": "Marketing", "status": "inactive", "joined": "2024-01-13", "avatar": "" },
+    { "id": 4, "name": "David Brown", "email": "david@example.com", "course": "Engineering", "status": "active", "joined": "2024-01-12", "avatar": "" },
+    { "id": 5, "name": "Eva Martinez", "email": "eva@example.com", "course": "Medicine", "status": "pending", "joined": "2024-01-11", "avatar": "" }
+  ],
+  "recentCourses": [
+    { "id": 1, "title": "Introduction to Financial Accounting", "instructor": "Carol Dawson", "students": 145, "status": "published", "category": "Business" },
+    { "id": 2, "title": "Corporate Finance", "instructor": "Robert Chen", "students": 98, "status": "published", "category": "Finance" },
+    { "id": 3, "title": "Marketing Principles", "instructor": "Emily Watson", "students": 203, "status": "draft", "category": "Marketing" },
+    { "id": 4, "title": "Introduction to Computer Science", "instructor": "David Park", "students": 312, "status": "published", "category": "Technology" },
+    { "id": 5, "title": "Strategic Management", "instructor": "James Wilson", "students": 87, "status": "published", "category": "Business" }
+  ],
+  "monthlyRevenue": [
+    { "month": "Jan", "revenue": 18500, "students": 210 },
+    { "month": "Feb", "revenue": 22300, "students": 245 },
+    { "month": "Mar", "revenue": 19800, "students": 198 },
+    { "month": "Apr", "revenue": 25600, "students": 287 },
+    { "month": "May", "revenue": 28900, "students": 312 },
+    { "month": "Jun", "revenue": 24100, "students": 268 },
+    { "month": "Jul", "revenue": 31200, "students": 334 },
+    { "month": "Aug", "revenue": 29800, "students": 298 },
+    { "month": "Sep", "revenue": 33400, "students": 356 },
+    { "month": "Oct", "revenue": 27600, "students": 289 },
+    { "month": "Nov", "revenue": 35100, "students": 378 },
+    { "month": "Dec", "revenue": 38900, "students": 412 }
+  ],
+  "courseCategories": [
+    { "name": "Business", "value": 45, "color": "#1a2e5a" },
+    { "name": "Technology", "value": 30, "color": "#4caf50" },
+    { "name": "Finance", "value": 15, "color": "#c8a84b" },
+    { "name": "Marketing", "value": 10, "color": "#2d4a8a" }
+  ],
+  "recentActivities": [
+    { "id": 1, "type": "enrollment", "message": "Alice Johnson enrolled in Business Administration", "time": "2 min ago" },
+    { "id": 2, "type": "course", "message": "New course 'AI Fundamentals' was published", "time": "15 min ago" },
+    { "id": 3, "type": "payment", "message": "Payment of $299 received from Bob Smith", "time": "1 hour ago" },
+    { "id": 4, "type": "event", "message": "Fintech Conference registration opened", "time": "3 hours ago" },
+    { "id": 5, "type": "instructor", "message": "Dr. Sarah Miller joined as new instructor", "time": "5 hours ago" }
+  ]
+}

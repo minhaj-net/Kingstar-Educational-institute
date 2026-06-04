@@ -1,0 +1,58 @@
+[
+  {
+    "id": "john-hagensy",
+    "name": "John Hagensy, PhD",
+    "role": "Adjunct Professor",
+    "email": "jhagensy@kingsteruni.edu",
+    "phone": "+1-2351-2361-355",
+    "room": "Room 102, A Building 1810 Campus Way NE Bothell, WA 98011-8246",
+    "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+    "qualifications": ["PhD, Accounting, Finance minor, Texas A&M University", "BA, Business Administration, University of Washington"],
+    "biography": "Currently, Professor John is focusing his research on individual investor behavior and company incentives to better understand how disclosure affects stock returns and to uncover possible mispricing.",
+    "education": ["Ph.D., Accounting & Finance, University of Strathclyde, Scotland", "M.S.F., Finance, Boston College, Chestnut Hill, MA, 2006", "M.B.A., Taxation, Golden Gate University, San Francisco, CA, 1983"],
+    "publications": ["The primary market value innovations of newly public firms", "Auditor Tenure and Quality of Financial Report", "Unexpected Fees and the Prediction of Material Weaknesses"],
+    "skills": [{ "name": "BUSINESS PLANNING", "level": 90 }, { "name": "BUSINESS LAW", "level": 70 }, { "name": "LECTURE SKILL", "level": 100 }]
+  },
+  {
+    "id": "fernando-smith",
+    "name": "Fernando Smith, PhD",
+    "role": "Assistant Professor",
+    "email": "fernandoSm@kingsteruni.edu",
+    "phone": "+1-2351-2361-355",
+    "room": "Room 204, Finance Building",
+    "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80",
+    "qualifications": ["B.S., Mechanics and Mathematics, Moscow State University", "Ph.D., Accounting, University of California at Berkeley"],
+    "biography": "Dr. Fernando Smith's research focus revolves around the intersection of classical mechanics and financial modeling. He brings a unique perspective to the Finance department.",
+    "education": ["PhD in Accounting, UC Berkeley", "BS in Mathematics, Moscow State University"],
+    "publications": ["Mathematical models in financial risk", "The mechanics of market stability"],
+    "skills": [{ "name": "FINANCIAL MODELING", "level": 95 }, { "name": "STATISTICAL ANALYSIS", "level": 85 }]
+  },
+  {
+    "id": "carol-dawson",
+    "name": "Carol Dawson, PhD",
+    "role": "Adjunct Professor",
+    "email": "carolds@kingsteruni.edu",
+    "phone": "+1-2351-2361-355",
+    "room": "Room 310, A Building",
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+    "qualifications": ["M.B.A., Taxation, Golden Gate University, San Francisco", "Ph.D., Accounting, University of North Texas"],
+    "biography": "Dr. Carol Dawson is an expert in taxation and organizational accounting. Her work has been published in numerous top-tier journals.",
+    "education": ["PhD in Accounting, University of North Texas", "MBA in Taxation, Golden Gate University"],
+    "publications": ["Corporate tax strategies in a global economy", "The evolution of ethical accounting"],
+    "skills": [{ "name": "TAXATION", "level": 95 }, { "name": "AUDITING", "level": 80 }]
+  },
+  {
+    "id": "albert-coman",
+    "name": "Albert Coman, PhD",
+    "role": "Assistant Professor",
+    "email": "albertcoman@kingsteruni.edu",
+    "phone": "+1-2351-2361-355",
+    "room": "Room 115, B Building",
+    "image": "https://images.unsplash.com/photo-1442458370899-ae20e367c5d8?w=600&q=80",
+    "qualifications": ["MBA, Saint Mary's University", "PhD, Accounting, Finance minor, Texas A&M University"],
+    "biography": "Dr. Albert Coman brings extensive experience from both academia and the private sector. His research focuses on the impact of financial minor specializations on overall corporate governance.",
+    "education": ["PhD in Finance, Texas A&M", "MBA, Saint Mary's University"],
+    "publications": ["Specialization in financial oversight", "Risk assessment in emerging markets"],
+    "skills": [{ "name": "CORPORATE GOVERNANCE", "level": 85 }, { "name": "RISK ASSESSMENT", "level": 90 }]
+  }
+]
