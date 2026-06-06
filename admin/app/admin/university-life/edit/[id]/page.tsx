@@ -93,8 +93,14 @@ export default function EditULPage() {
         gallery: Array.isArray(found.gallery) ? found.gallery : [],
       });
     };
+    // Always try sessionStorage first, then fallback to JSON
     const saved = sessionStorage.getItem("admin_university_life");
-    if (saved) { load(JSON.parse(saved)); return; }
+    if (saved) {
+      const parsed: ULItem[] = JSON.parse(saved);
+      const found = parsed.find(item => item.id === id);
+      if (found) { load(parsed); return; }
+    }
+    // Fetch fresh from JSON (covers first visit or item not yet in session)
     fetch("/university-life.json")
       .then(r=>r.json())
       .then((data: ULItem[]) => {

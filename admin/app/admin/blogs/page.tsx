@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 import DataTable, { Column, StatusBadge } from "../_components/DataTable";
-import Modal from "../_components/Modal";
 
-interface Blog {
+export interface Blog {
   id: number;
   slug: string;
   title: string;
@@ -17,20 +18,30 @@ interface Blog {
   readTime: string;
 }
 
-const EMPTY: Blog = {
-  id: 0,
-  slug: "",
-  title: "",
-  excerpt: "",
-  category: "",
-  tag: "",
-  date: "",
-  author: "",
-  image: "",
-  readTime: "",
-};
+const STORAGE_KEY = "admin_blogs";
 
 const columns: Column<Blog>[] = [
+  {
+    key: "image",
+    label: "Thumb",
+    render: (v) => (
+      <div
+        className="w-12 h-9 rounded-lg overflow-hidden relative flex-shrink-0"
+        style={{ backgroundColor: "var(--bg-input)" }}
+      >
+        {String(v) && (
+          <Image
+            src={String(v)}
+            alt="blog"
+            fill
+            sizes="48px"
+            className="object-cover"
+            unoptimized
+          />
+        )}
+      </div>
+    ),
+  },
   {
     key: "title",
     label: "Title",
@@ -45,154 +56,58 @@ const columns: Column<Blog>[] = [
       </span>
     ),
   },
-  { key: "author", label: "Author", sortable: true },
-  { key: "category", label: "Category", sortable: true },
-  {
-    key: "tag",
-    label: "Tag",
-    render: (v) => <StatusBadge value={String(v)} />,
-  },
+  { key: "author", label: "Author", sortable: true, hideOnMobile: true },
+  { key: "category", label: "Category", sortable: true, hideOnMobile: true },
+  { key: "tag", label: "Tag", render: (v) => <StatusBadge value={String(v)} /> },
   { key: "date", label: "Date", sortable: true, hideOnMobile: true },
   { key: "readTime", label: "Read Time", hideOnMobile: true },
 ];
 
-function FormField({
-  label,
-  name,
-  value,
-  onChange,
-  multiline = false,
-}: {
-  label: string;
-  name: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  multiline?: boolean;
-}) {
-  return (
-    <div className="flex flex-col gap-1">
-      <label className="text-xs font-medium" style={{ color: "var(--text-muted)" }}>
-        {label}
-      </label>
-      {multiline ? (
-        <textarea
-          name={name}
-          value={value}
-          onChange={onChange}
-          rows={3}
-          className="admin-input rounded-xl px-3 py-2 text-sm resize-none"
-        />
-      ) : (
-        <input
-          type="text"
-          name={name}
-          value={value}
-          onChange={onChange}
-          className="admin-input rounded-xl px-3 py-2 text-sm"
-        />
-      )}
-    </div>
-  );
-}
-
 export default function BlogsPage() {
+  const router = useRouter();
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [editing, setEditing] = useState<Blog | null>(null);
-  const [form, setForm] = useState<Blog>(EMPTY);
 
+  // Always re-sync from sessionStorage on mount so edits from edit-page are reflected
   useEffect(() => {
+    const saved = sessionStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      setBlogs(JSON.parse(saved));
+      setLoading(false);
+      return;
+    }
     fetch("/blogs.json")
       .then((r) => r.json())
-      .then((d: Blog[]) => setBlogs(d))
+      .then((d: Blog[]) => {
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(d));
+        setBlogs(d);
+      })
       .catch(console.error)
       .finally(() => setLoading(false));
   }, []);
 
-  function openAdd() {
-    setEditing(null);
-    setForm({ ...EMPTY, id: Date.now() });
-    setModalOpen(true);
-  }
-
-  function openEdit(row: Blog) {
-    setEditing(row);
-    setForm({ ...row });
-    setModalOpen(true);
+  function persist(updated: Blog[]) {
+    setBlogs(updated);
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
   }
 
   function handleDelete(row: Blog) {
-    setBlogs((prev) => prev.filter((b) => b.id !== row.id));
+    persist(blogs.filter((b) => b.id !== row.id));
   }
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-  }
-
-  function handleSave() {
-    if (editing) {
-      setBlogs((prev) => prev.map((b) => (b.id === editing.id ? form : b)));
-    } else {
-      setBlogs((prev) => [...prev, form]);
-    }
-    setModalOpen(false);
+  function handleEdit(row: Blog) {
+    router.push(`/admin/blogs/edit/${row.id}`);
   }
 
   return (
-    <>
-      <DataTable
-        title="Blog Posts"
-        columns={columns}
-        data={blogs}
-        loading={loading}
-        onAdd={openAdd}
-        onEdit={(row) => openEdit(row)}
-        onDelete={(row) => handleDelete(row)}
-      />
-
-      <Modal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        title={editing ? "Edit Blog Post" : "Add Blog Post"}
-      >
-        <div className="space-y-4">
-          <FormField label="Title" name="title" value={form.title} onChange={handleChange} />
-          <FormField label="Excerpt" name="excerpt" value={form.excerpt} onChange={handleChange} multiline />
-          <div className="grid grid-cols-2 gap-3">
-            <FormField label="Category" name="category" value={form.category} onChange={handleChange} />
-            <FormField label="Tag" name="tag" value={form.tag} onChange={handleChange} />
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            <FormField label="Author" name="author" value={form.author} onChange={handleChange} />
-            <FormField label="Date" name="date" value={form.date} onChange={handleChange} />
-          </div>
-          <FormField label="Read Time" name="readTime" value={form.readTime} onChange={handleChange} />
-          <div className="flex gap-3 pt-2">
-            <button
-              onClick={() => setModalOpen(false)}
-              className="flex-1 py-2.5 rounded-xl text-sm font-medium border transition-colors"
-              style={{
-                borderColor: "var(--border)",
-                color: "var(--text-muted)",
-                backgroundColor: "var(--bg-input)",
-              }}
-            >
-              Cancel
-            </button>
-            <button
-              onClick={handleSave}
-              className="flex-1 py-2.5 rounded-xl text-sm font-semibold text-white transition-colors"
-              style={{ backgroundColor: "#4caf50" }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#43a047")}
-              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#4caf50")}
-            >
-              {editing ? "Save Changes" : "Add Post"}
-            </button>
-          </div>
-        </div>
-      </Modal>
-    </>
+    <DataTable
+      title="Blog / News"
+      columns={columns}
+      data={blogs}
+      loading={loading}
+      onAdd={() => router.push("/admin/blogs/add")}
+      onEdit={handleEdit}
+      onDelete={handleDelete}
+    />
   );
 }

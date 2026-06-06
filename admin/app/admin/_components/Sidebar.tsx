@@ -159,7 +159,7 @@ const navGroups: NavGroup[] = [
         children: [
           { label: "All Posts",      href: "/admin/blogs",                icon: Newspaper },
           { label: "Add Post",       href: "/admin/blogs/add",            icon: FileText },
-          { label: "Categories",     href: "/admin/blogs/categories",     icon: Tag },
+          // { label: "Categories",     href: "/admin/blogs/categories",     icon: Tag },
         ],
       },
       {
@@ -167,8 +167,8 @@ const navGroups: NavGroup[] = [
         href: "/admin/gallery",
         icon: Image,
         children: [
-          { label: "All Photos",     href: "/admin/gallery",              icon: Image },
-          { label: "Upload",         href: "/admin/gallery/upload",       icon: FileText },
+          { label: "All Gallery", href: "/admin/gallery",     icon: Image },
+          { label: "Add Photo",   href: "/admin/gallery/add", icon: FileText },
         ],
       },
       {
