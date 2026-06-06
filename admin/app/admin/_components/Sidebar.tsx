@@ -176,34 +176,34 @@ const navGroups: NavGroup[] = [
         href: "/admin/portfolio",
         icon: Briefcase,
         children: [
-          { label: "All Items",      href: "/admin/portfolio",            icon: Briefcase },
-          { label: "Categories",     href: "/admin/portfolio/categories", icon: Tag },
+          { label: "All Portfolio",  href: "/admin/portfolio",            icon: Briefcase },
+          { label: "Add Portfolio",  href: "/admin/portfolio/add",        icon: FileText },
         ],
       },
-      {
-        label: "Pages",
-        href: "/admin/pages",
-        icon: Globe,
-        children: [
-          { label: "About Us",       href: "/admin/pages/about",          icon: Globe },
-          { label: "Contact",        href: "/admin/pages/contact",        icon: Megaphone },
-          { label: "Price Table",    href: "/admin/pages/pricing",        icon: DollarSign },
-        ],
-      },
+      // {
+      //   label: "Pages",
+      //   href: "/admin/pages",
+      //   icon: Globe,
+      //   children: [
+      //     { label: "About Us",       href: "/admin/pages/about",          icon: Globe },
+      //     { label: "Contact",        href: "/admin/pages/contact",        icon: Megaphone },
+      //     { label: "Price Table",    href: "/admin/pages/pricing",        icon: DollarSign },
+      //   ],
+      // },
     ],
   },
-  {
-    group: "Commerce",
-    items: [
-      { label: "Shop",    href: "/admin/shop",    icon: ShoppingBag },
-      { label: "Orders",  href: "/admin/orders",  icon: ShoppingCart },
-      {
-        label: "Give to KU",
-        href: "/admin/donations",
-        icon: Heart,
-      },
-    ],
-  },
+  // {
+  //   group: "Commerce",
+  //   items: [
+  //     { label: "Shop",    href: "/admin/shop",    icon: ShoppingBag },
+  //     { label: "Orders",  href: "/admin/orders",  icon: ShoppingCart },
+  //     {
+  //       label: "Give to KU",
+  //       href: "/admin/donations",
+  //       icon: Heart,
+  //     },
+  //   ],
+  // },
   {
     group: "System",
     items: [
@@ -307,7 +307,7 @@ function NavItem({
           href={item.href}
           onClick={onClose}
           title={collapsed ? item.label : undefined}
-          className="flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200"
+          className="flex items-center gap-3 px-3 py-2.5 rounded-xl  transition-all duration-200"
           style={{
             backgroundColor: highlighted ? "var(--accent)" : "transparent",
             color: highlighted ? "white" : "var(--text-muted)",

@@ -19,34 +19,20 @@ const STORAGE_KEY = "admin_gallery";
 
 const columns: Column<GalleryItem>[] = [
   {
-    key: "image", label: "Photo",
+    key: "image", label: "Image",
     render: (v) => (
-      <div className="w-12 h-9 rounded-lg overflow-hidden relative flex-shrink-0"
-        style={{ backgroundColor: "var(--bg-input)" }}>
+      <div className="w-12 h-9 rounded-lg overflow-hidden relative flex-shrink-0" style={{ backgroundColor: "var(--bg-input)" }}>
         {String(v) && <Image src={String(v)} alt="thumb" fill sizes="48px" className="object-cover" unoptimized />}
       </div>
     ),
   },
-  {
-    key: "id", label: "ID",
-    render: (v) => <span className="text-xs font-mono" style={{ color: "var(--text-faint)" }}>#{String(v)}</span>,
-  },
-  {
-    key: "title", label: "Title", sortable: true,
-    render: (v) => <span className="font-semibold text-sm" style={{ color: "var(--text)" }}>{String(v)}</span>,
-  },
-  {
-    key: "caption", label: "Caption", hideOnMobile: true,
-    render: (v) => (
-      <span className="text-sm max-w-[200px] truncate block" style={{ color: "var(--text-muted)" }} title={String(v)}>
-        {String(v)}
-      </span>
-    ),
-  },
-  {
-    key: "category", label: "Category", sortable: true,
-    render: (v) => <StatusBadge value={String(v)} />,
-  },
+  { key: "id", label: "ID", sortable: true,
+    render: (v) => <span className="text-xs font-medium" style={{ color: "var(--text-faint)" }}>#{String(v)}</span> },
+  { key: "title", label: "Title", sortable: true,
+    render: (v) => <span className="font-medium text-sm" style={{ color: "var(--text)" }}>{String(v)}</span> },
+  { key: "caption", label: "Caption", hideOnMobile: true,
+    render: (v) => <span className="text-sm max-w-[200px] truncate block" style={{ color: "var(--text-muted)" }} title={String(v)}>{String(v)}</span> },
+  { key: "category", label: "Category", sortable: true, render: (v) => <StatusBadge value={String(v)} /> },
 ];
 
 export default function GalleryPage() {
@@ -56,10 +42,7 @@ export default function GalleryPage() {
 
   useEffect(() => {
     const saved = sessionStorage.getItem(STORAGE_KEY);
-    if (saved) {
-      try { setItems(JSON.parse(saved)); setLoading(false); return; }
-      catch { sessionStorage.removeItem(STORAGE_KEY); }
-    }
+    if (saved) { setItems(JSON.parse(saved)); setLoading(false); return; }
     fetch("/gallery.json")
       .then((r) => r.json())
       .then((d: GalleryItem[]) => {
@@ -80,7 +63,7 @@ export default function GalleryPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
           <h1 className="text-xl font-bold" style={{ color: "var(--text)" }}>Gallery</h1>
-          <p className="text-xs mt-0.5" style={{ color: "var(--text-faint)" }}>{items.length} photos</p>
+          <p className="text-xs mt-0.5" style={{ color: "var(--text-faint)" }}>{items.length} items</p>
         </div>
         <Link href="/admin/gallery/add"
           className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-semibold text-white w-fit"
