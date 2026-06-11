@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronLeft, Image as ImageIcon } from "lucide-react";
+import ImageUploadField from "../../_components/ImageUploadField";
 import type { GalleryItem } from "../page";
 
 const STORAGE_KEY = "admin_gallery";
@@ -60,8 +60,6 @@ export default function AddGalleryPage() {
     }, 500);
   }
 
-  const imagePreview = form.image.startsWith("http");
-
   return (
     <form onSubmit={handleSubmit} noValidate>
       <div className="max-w-4xl mx-auto space-y-6">
@@ -106,22 +104,18 @@ export default function AddGalleryPage() {
               </select>
               {errors.category && <p className="text-xs" style={{ color:"#ef4444" }}>{errors.category}</p>}
             </div>
-            <Field label="Image URL" name="image" value={form.image} onChange={handleChange} />
           </div>
 
           <div className="space-y-5">
             <div className="admin-card rounded-2xl p-5 space-y-4">
               <h3 className="text-sm font-bold" style={{ color:"var(--text)" }}>Image Preview</h3>
-              {imagePreview ? (
-                <div className="relative w-full rounded-xl overflow-hidden" style={{ height:"200px" }}>
-                  <Image src={form.image} alt="preview" fill className="object-cover" unoptimized />
-                </div>
-              ) : (
-                <div className="flex flex-col items-center justify-center rounded-xl py-10" style={{ backgroundColor:"var(--bg-input)", border:"2px dashed var(--border)" }}>
-                  <ImageIcon className="w-8 h-8" style={{ color:"var(--text-faint)" }} />
-                  <p className="text-xs mt-2" style={{ color:"var(--text-faint)" }}>Paste URL in form</p>
-                </div>
-              )}
+              <ImageUploadField
+                label="Gallery"
+                value={form.image}
+                onChange={(url) => setForm((p) => ({ ...p, image: url }))}
+                previewHeight={200}
+                placeholderIcon={<ImageIcon className="w-8 h-8" style={{ color:"var(--text-faint)" }} />}
+              />
             </div>
             <div className="admin-card rounded-2xl p-5 space-y-3">
               <h3 className="text-sm font-bold" style={{ color:"var(--text)" }}>Summary</h3>

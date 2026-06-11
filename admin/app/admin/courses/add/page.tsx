@@ -3,9 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronLeft, Plus, X, BookOpen } from "lucide-react";
-
+import ImageUploadField from "../../_components/ImageUploadField";
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 interface ScheduleRow {
@@ -194,10 +193,7 @@ export default function AddCoursePage() {
     }, 600);
   }
 
-  const imagePreview = form.image.startsWith("http");
-
-  return (
-    <form onSubmit={handleSubmit} noValidate>
+  return (    <form onSubmit={handleSubmit} noValidate>
       <div className="max-w-5xl mx-auto space-y-6">
 
         {/* ── Page header ── */}
@@ -410,24 +406,13 @@ export default function AddCoursePage() {
 
             {/* Image */}
             <FormSection title="Course Image">
-              <Field label="Image URL" name="image" value={form.image} onChange={handleChange}
-                placeholder="https://images.unsplash.com/…" />
-              {imagePreview && (
-                <div className="relative w-full overflow-hidden rounded-xl"
-                  style={{ height: "160px", backgroundColor: "var(--bg-input)" }}>
-                  <Image src={form.image} alt="preview" fill
-                    className="object-cover" unoptimized />
-                </div>
-              )}
-              {!imagePreview && (
-                <div className="flex flex-col items-center justify-center rounded-xl py-8 gap-2"
-                  style={{ backgroundColor: "var(--bg-input)", border: "2px dashed var(--border)" }}>
-                  <BookOpen className="w-8 h-8" style={{ color: "var(--text-faint)" }} />
-                  <p className="text-xs" style={{ color: "var(--text-faint)" }}>
-                    Paste an image URL above to preview
-                  </p>
-                </div>
-              )}
+              <ImageUploadField
+                label="Course"
+                value={form.image}
+                onChange={(url) => setForm((prev) => ({ ...prev, image: url }))}
+                previewHeight={160}
+                placeholderIcon={<BookOpen className="w-8 h-8" style={{ color: "var(--text-faint)" }} />}
+              />
             </FormSection>
 
             {/* Summary card */}

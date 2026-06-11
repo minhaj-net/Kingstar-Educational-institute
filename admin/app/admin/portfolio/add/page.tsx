@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronLeft, Plus, X, Briefcase } from "lucide-react";
+import ImageUploadField from "../../_components/ImageUploadField";
 import type { PortfolioItem } from "../page";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -325,43 +325,13 @@ export default function AddPortfolioPage() {
 
             {/* Image */}
             <FormSection title="Portfolio Image">
-              <Field
-                label="Image URL"
-                name="image"
+              <ImageUploadField
+                label="Portfolio"
                 value={form.image}
-                onChange={handleChange}
-                placeholder="https://images.unsplash.com/…"
+                onChange={(url) => setForm(prev => ({ ...prev, image: url }))}
+                previewHeight={180}
+                placeholderIcon={<Briefcase className="w-8 h-8" style={{ color: "var(--text-faint)" }} />}
               />
-              {imagePreview ? (
-                <div
-                  className="relative w-full overflow-hidden rounded-xl"
-                  style={{ height: "180px" }}
-                >
-                  <Image
-                    src={form.image}
-                    alt="preview"
-                    fill
-                    className="object-cover"
-                    unoptimized
-                  />
-                </div>
-              ) : (
-                <div
-                  className="flex flex-col items-center justify-center rounded-xl py-10 gap-2"
-                  style={{
-                    backgroundColor: "var(--bg-input)",
-                    border: "2px dashed var(--border)",
-                  }}
-                >
-                  <Briefcase
-                    className="w-8 h-8"
-                    style={{ color: "var(--text-faint)" }}
-                  />
-                  <p className="text-xs" style={{ color: "var(--text-faint)" }}>
-                    Paste an image URL above to preview
-                  </p>
-                </div>
-              )}
             </FormSection>
 
             {/* Summary */}

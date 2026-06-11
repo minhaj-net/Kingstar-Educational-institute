@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronLeft, UserCircle } from "lucide-react";
 import { StatusBadge } from "../../_components/DataTable";
+import ImageUploadField from "../../_components/ImageUploadField";
 import type { AlumniMember } from "../page";
 
 const categoryOptions = ["BLOG", "MASONRY", "RESEARCH", "ALUMNI", "NEWS", "ARTICLE"];
@@ -64,8 +64,6 @@ export default function AddAlumniPage() {
       router.push("/admin/alumni");
     }, 600);
   }
-
-  const imagePreview = form.image.startsWith("http");
 
   return (
     <form onSubmit={handleSubmit} noValidate>
@@ -140,18 +138,13 @@ export default function AddAlumniPage() {
           <div className="space-y-5">
             <div className="admin-card rounded-2xl p-5 space-y-4">
               <h3 className="text-sm font-bold" style={{ color: "var(--text)" }}>Profile Image</h3>
-              <Field label="Image URL" name="image" value={form.image} onChange={handleChange} />
-              {imagePreview ? (
-                <div className="relative w-full rounded-xl overflow-hidden" style={{ height: "160px" }}>
-                  <Image src={form.image} alt="preview" fill className="object-cover" unoptimized />
-                </div>
-              ) : (
-                <div className="flex flex-col items-center justify-center rounded-xl py-8"
-                  style={{ backgroundColor: "var(--bg-input)", border: "2px dashed var(--border)" }}>
-                  <UserCircle className="w-8 h-8" style={{ color: "var(--text-faint)" }} />
-                  <p className="text-xs mt-2" style={{ color: "var(--text-faint)" }}>Paste URL above</p>
-                </div>
-              )}
+              <ImageUploadField
+                label="Profile"
+                value={form.image}
+                onChange={(url) => setForm((p) => ({ ...p, image: url }))}
+                previewHeight={160}
+                placeholderIcon={<UserCircle className="w-8 h-8" style={{ color: "var(--text-faint)" }} />}
+              />
             </div>
             <div className="admin-card rounded-2xl p-5 space-y-3">
               <h3 className="text-sm font-bold" style={{ color: "var(--text)" }}>Preview</h3>

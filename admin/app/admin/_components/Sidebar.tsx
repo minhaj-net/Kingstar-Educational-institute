@@ -19,20 +19,11 @@ import {
   X,
   Image,
   Briefcase,
-  Heart,
-  School,
   Trophy,
   Building2,
-  Globe,
-  Tag,
   FileText,
-  DollarSign,
   UserCircle,
   MapPin,
-  Megaphone,
-  FlaskConical,
-  ShoppingBag,
-  ShoppingCart,
 } from "lucide-react";
 import { useThemeStore } from "@/store/themeStore";
 
@@ -133,11 +124,11 @@ const navGroups: NavGroup[] = [
           { label: "Add Event",      href: "/admin/events/add",       icon: FileText },
         ],
       },
-      {
-        label: "Athletics",
-        href: "/admin/athletics",
-        icon: Trophy,
-      },
+        // {
+        //   label: "Athletics",
+        //   href: "/admin/athletics",
+        //   icon: Trophy,
+        // },
       {
         label: "University Life",
         href: "/admin/university-life",
@@ -212,15 +203,6 @@ const navGroups: NavGroup[] = [
   },
 ];
 
-// Shield icon not in lucide bundle used — replace with a working one
-function Shield({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-    </svg>
-  );
-}
-
 // ─── Single nav item (may have children) ─────────────────────────────────────
 
 function NavItem({
@@ -250,7 +232,7 @@ function NavItem({
           onClick={() => setOpen((v) => !v)}
           className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200"
           style={{
-            color: highlighted ? "var(--accent)" : "var(--text-muted)",
+            color: highlighted ? "var(--accent)" : "var(--text)",
             backgroundColor: highlighted ? "color-mix(in srgb, var(--accent) 10%, transparent)" : "transparent",
           }}
         >
@@ -284,7 +266,7 @@ function NavItem({
               className={`flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-xs font-medium transition-all duration-200`}
                       style={{
                         backgroundColor: active ? "var(--accent)" : "transparent",
-                        color: active ? "white" : "var(--text-muted)",
+                        color: active ? "white" : "var(--text)",
                       }}
                     >
                       <ChildIcon className="w-3.5 h-3.5 flex-shrink-0" />
@@ -310,7 +292,7 @@ function NavItem({
           className="flex items-center gap-3 px-3 py-2.5 rounded-xl  transition-all duration-200"
           style={{
             backgroundColor: highlighted ? "var(--accent)" : "transparent",
-            color: highlighted ? "white" : "var(--text-muted)",
+            color: highlighted ? "white" : "var(--text)",
             boxShadow: highlighted ? "0 2px 8px color-mix(in srgb, var(--accent) 30%, transparent)" : "none",
           }}
         >

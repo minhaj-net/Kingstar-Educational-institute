@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronLeft, Building2, Plus, X } from "lucide-react";
+import ImageUploadField from "../../_components/ImageUploadField";
 import type { ULItem } from "../page";
 
 const categoryOptions = ["Campus Life","Athletics","Health","Safety","Technology","Culture","Events","Research"];
@@ -119,8 +119,6 @@ export default function AddULPage() {
     }, 600);
   }
 
-  const imagePreview = form.image.startsWith("http");
-
   return (
     <form onSubmit={handleSubmit} noValidate>
       <div className="max-w-5xl mx-auto space-y-6">
@@ -209,18 +207,13 @@ export default function AddULPage() {
           {/* Right */}
           <div className="space-y-5">
             <FormSection title="Cover Image">
-              <Field label="Image URL" name="image" value={form.image} onChange={handleChange} />
-              {imagePreview ? (
-                <div className="relative w-full rounded-xl overflow-hidden" style={{ height:"160px" }}>
-                  <Image src={form.image} alt="preview" fill className="object-cover" unoptimized />
-                </div>
-              ) : (
-                <div className="flex flex-col items-center justify-center rounded-xl py-8"
-                  style={{ backgroundColor:"var(--bg-input)", border:"2px dashed var(--border)" }}>
-                  <Building2 className="w-8 h-8" style={{ color:"var(--text-faint)" }} />
-                  <p className="text-xs mt-2" style={{ color:"var(--text-faint)" }}>Paste URL above</p>
-                </div>
-              )}
+              <ImageUploadField
+                label="Cover"
+                value={form.image}
+                onChange={(url) => setForm(p => ({ ...p, image: url }))}
+                previewHeight={160}
+                placeholderIcon={<Building2 className="w-8 h-8" style={{ color:"var(--text-faint)" }} />}
+              />
             </FormSection>
 
             <div className="admin-card rounded-2xl p-5 space-y-3">

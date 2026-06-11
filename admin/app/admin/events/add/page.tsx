@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronLeft, Calendar } from "lucide-react";
+import ImageUploadField from "../../_components/ImageUploadField";
 import type { KUEvent } from "../page";
 
 const monthOptions = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
@@ -58,8 +58,6 @@ export default function AddEventPage() {
       router.push("/admin/events");
     }, 600);
   }
-
-  const imagePreview = form.image.startsWith("http");
 
   return (
     <form onSubmit={handleSubmit} noValidate>
@@ -146,19 +144,13 @@ export default function AddEventPage() {
           <div className="space-y-5">
             <div className="admin-card rounded-2xl p-5 space-y-4">
               <h3 className="text-sm font-bold" style={{ color: "var(--text)" }}>Event Image</h3>
-              <Field label="Image URL" name="image" value={form.image}
-                onChange={handleChange as (e: React.ChangeEvent<HTMLInputElement>) => void} />
-              {imagePreview ? (
-                <div className="relative w-full rounded-xl overflow-hidden" style={{ height: "160px" }}>
-                  <Image src={form.image} alt="preview" fill className="object-cover" unoptimized />
-                </div>
-              ) : (
-                <div className="flex flex-col items-center justify-center rounded-xl py-8"
-                  style={{ backgroundColor: "var(--bg-input)", border: "2px dashed var(--border)" }}>
-                  <Calendar className="w-8 h-8" style={{ color: "var(--text-faint)" }} />
-                  <p className="text-xs mt-2" style={{ color: "var(--text-faint)" }}>Paste URL above</p>
-                </div>
-              )}
+              <ImageUploadField
+                label="Event"
+                value={form.image}
+                onChange={(url) => setForm((p) => ({ ...p, image: url }))}
+                previewHeight={160}
+                placeholderIcon={<Calendar className="w-8 h-8" style={{ color: "var(--text-faint)" }} />}
+              />
             </div>
 
             {/* Summary */}
