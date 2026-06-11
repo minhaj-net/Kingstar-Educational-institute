@@ -39,23 +39,23 @@ interface MegaMenuData {
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const topBarLinks = [
-  { label: "Alumni", href: "/alumni" },
-  { label: "Calendar", href: "/celender" },
-  { label: "Portal", href: "/portal" },
+  { label: "Announcements", href: "/announcements" },
+  { label: "Contact",       href: "/contact" },
+  { label: "Career",        href: "/career" },
 ];
 
 const navItems: NavItem[] = [
+  // ── Primary highlighted items ────────────────────────────────────────────
   { label: "Home", href: "/" },
   {
-    label: "Pages",
-    href: "#",
+    label: "About",
+    href: "/about-us",
     children: [
-      { label: "About Us", href: "/about-us" },
-      { label: "Blog", href: "/blogs" },
-      { label: "Contact", href: "/contact" },
-      { label: "Portfolio", href: "/portfolio" },
-      { label: "Gallery", href: "/gallary" },
-      { label: "Price Table", href: "/price-table" },
+      { label: "About Us",        href: "/about-us" },
+      { label: "Alumni",          href: "/alumni" },
+      { label: "Career",          href: "/career" },
+      { label: "Portal",          href: "/portal" },
+      { label: "Give to Kingster",href: "/give-to-kingstar" },
     ],
   },
   {
@@ -67,27 +67,24 @@ const navItems: NavItem[] = [
           heading: "Undergraduate",
           links: [
             { label: "Business Administration", href: "/business-administration" },
-            { label: "School Of Law", href: "/school-of-law" },
-            { label: "Engineering", href: "/engineering" },
-            { label: "Medicine", href: "/medicine" },
-            { label: "Art & Science", href: "/art-science" },
+            { label: "School Of Law",           href: "/school-of-law" },
+            { label: "Engineering",             href: "/engineering" },
+            { label: "Medicine",                href: "/medicine" },
+            { label: "Art & Science",           href: "/art-science" },
           ],
         },
         {
           heading: "Graduate Program",
           links: [
             { label: "Hospitality Management", href: "/hospitality-management" },
-            { label: "Physics", href: "/physics" },
-            // { label: "Chemistry", href: "/chemistry" },
-            // { label: "Music", href: "/music" },
-            // { label: "Computer Science", href: "/computer-science" },
+            { label: "Physics",                href: "/physics" },
           ],
         },
         {
           heading: "Resources",
           links: [
-            { label: "Department Page", href: "/business-administration" },
-            { label: "Finance", href: "/finance" },
+            { label: "All Courses",  href: "/courses" },
+            { label: "Finance",      href: "/finance" },
             { label: "Faculty Page", href: "/finance-faculty" },
           ],
         },
@@ -101,16 +98,44 @@ const navItems: NavItem[] = [
     label: "Admissions",
     href: "#",
     children: [
-      { label: "Apply Now", href: "/apply-kingstar" },
-      { label: "Campus Tour", href: "/campus-tour" },
+      { label: "Apply Now",    href: "/apply-kingstar" },
+      { label: "Campus Tour",  href: "/campus-tour" },
       { label: "Scholarships", href: "/scholarships" },
-      { label: "Athletics", href: "/athletics" },
-      { label: "Give to Kingster", href: "/give-to-kingstar" },
+      { label: "Athletics",    href: "/athletics" },
     ],
   },
-  { label: "Courses", href: "/courses" },
-  { label: "Athletics", href: "/athletics" },
-  { label: "University Life", href: "/university-life" },
+  {
+    label: "Research",
+    href: "/research",
+    children: [
+      { label: "Research Overview",  href: "/research" },
+      { label: "Publications",       href: "/research/publications" },
+      { label: "Labs & Centers",     href: "/research/labs-centers" },
+    ],
+  },
+  {
+    label: "Student Life",
+    href: "/student-life",
+    children: [
+      { label: "University Life", href: "/university-life" },
+      { label: "Athletics",       href: "/athletics" },
+      { label: "Campus Tour",     href: "/campus-tour" },
+      { label: "Student Life",    href: "/student-life" },
+    ],
+  },
+  {
+    label: "News",
+    href: "/news",
+    children: [
+      { label: "Latest News",    href: "/news" },
+      { label: "Blog",           href: "/blogs" },
+      { label: "Press Releases", href: "/news" },
+    ],
+  },
+  {
+    label: "Apply Now",
+    href: "/apply-kingstar",
+  },
 ];
 
 // ─── Simple dropdown ──────────────────────────────────────────────────────────
@@ -361,7 +386,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-[72px]">
 
-            {/* Logo */}
+            {/* Logo — left */}
             <div ref={logoRef} className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 group">
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-[#1a2e5a] flex items-center justify-center bg-white group-hover:bg-[#1a2e5a] transition-colors duration-300 flex-shrink-0">
@@ -380,32 +405,32 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Desktop Nav */}
+            {/* Desktop Nav — center */}
             <nav className="hidden lg:flex items-center gap-0.5 relative">
-              {navItems.map((item, i) => (
+              {navItems.filter(i => i.label !== "Apply Now").map((item, i) => (
                 <div
                   key={item.label}
                   className="relative"
                   onMouseEnter={() => (item.children || item.megaMenu) && setActiveDropdown(item.label)}
                   onMouseLeave={() => setActiveDropdown(null)}
                   data-aos="fade-down"
-                  data-aos-delay={i * 60}
+                  data-aos-delay={i * 40}
                 >
                   <Link
                     href={item.href}
-                    className={`flex items-center gap-0.5 px-3 py-2 text-sm font-medium transition-colors duration-200 relative group
+                    className={`flex items-center gap-0.5 px-2.5 py-2 text-sm font-medium transition-colors duration-200 relative group whitespace-nowrap
                       ${isActive(item) ? "text-[#4caf50]" : "text-gray-700 hover:text-[#1a2e5a]"}`}
                   >
                     {item.label}
                     {(item.children || item.megaMenu) && (
-                      <ChevronDown size={13}
-                        className={`transition-transform duration-200 ${activeDropdown === item.label ? "rotate-180" : ""}`} />
+                      <ChevronDown size={12}
+                        className={`transition-transform duration-200 flex-shrink-0 ${activeDropdown === item.label ? "rotate-180" : ""}`} />
                     )}
                     {isActive(item) && (
-                      <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#4caf50] rounded-full" />
+                      <span className="absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-[#4caf50] rounded-full" />
                     )}
                     {!isActive(item) && (
-                      <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#1a2e5a] rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
+                      <span className="absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-[#1a2e5a] rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
                     )}
                   </Link>
 
@@ -419,15 +444,23 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* Right actions */}
-            <div className="flex items-center gap-1">
+            {/* Right actions — Search + Apply Now + Hamburger */}
+            <div className="flex items-center gap-2 flex-shrink-0">
               {/* Search button */}
               <button onClick={() => setSearchOpen((v) => !v)} aria-label="Toggle search"
                 className="p-2 text-gray-600 hover:text-[#1a2e5a] transition-colors duration-200">
                 {searchOpen ? <X size={18} /> : <Search size={18} />}
               </button>
 
-              {/* Hamburger */}
+              {/* Apply Now — desktop only */}
+              <Link
+                href="/apply-kingstar"
+                className="hidden lg:flex items-center px-4 py-2 text-sm font-semibold text-white rounded-sm transition-colors duration-200 bg-[#4caf50] hover:bg-[#43a047] whitespace-nowrap"
+              >
+                Apply Now
+              </Link>
+
+              {/* Hamburger — mobile only */}
               <button onClick={() => setMobileOpen((v) => !v)} aria-label="Toggle menu"
                 className="lg:hidden p-2 text-gray-700 hover:text-[#1a2e5a] transition-colors duration-200">
                 {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -497,58 +530,71 @@ export default function Navbar() {
           <nav className="px-4 py-2 flex flex-col">
             {navItems.map((item) => (
               <div key={item.label} className="border-b border-gray-50 last:border-b-0">
-                <div className="flex items-center justify-between">
+                {/* Apply Now — full-width CTA */}
+                {item.label === "Apply Now" ? (
                   <Link
-                    href={item.href === "#" ? "#" : item.href}
-                    onClick={() => !(item.children || item.megaMenu) && setMobileOpen(false)}
-                    className={`flex-1 py-3 px-1 text-sm font-medium transition-colors duration-200
-                      ${isActive(item) ? "text-[#4caf50]" : "text-gray-700"}`}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center justify-center gap-2 my-2 py-3 text-sm font-semibold text-white rounded-sm bg-[#4caf50] hover:bg-[#43a047] transition-colors"
                   >
                     {item.label}
                   </Link>
-                  {(item.children || item.megaMenu) && (
-                    <button
-                      onClick={() => setMobileExpanded((prev) => prev === item.label ? null : item.label)}
-                      className="p-2.5 text-gray-400 hover:text-[#1a2e5a] transition-colors"
-                      aria-label={`Expand ${item.label}`}
-                    >
-                      <ChevronDown size={15}
-                        className={`transition-transform duration-200 ${mobileExpanded === item.label ? "rotate-180" : ""}`} />
-                    </button>
-                  )}
-                </div>
-
-                {/* Simple children */}
-                {item.children && mobileExpanded === item.label && (
-                  <div className="ml-3 mb-2 border-l-2 border-[#4caf50] pl-3 flex flex-col gap-0.5 animate__animated animate__fadeIn animate__faster">
-                    {item.children.map((child) => (
-                      <Link key={child.label} href={child.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="py-2 px-1 text-sm text-gray-600 hover:text-[#4caf50] transition-colors duration-200">
-                        {child.label}
+                ) : (
+                  <>
+                    <div className="flex items-center justify-between">
+                      <Link
+                        href={item.href === "#" ? "#" : item.href}
+                        onClick={() => !(item.children || item.megaMenu) && setMobileOpen(false)}
+                        className={`flex-1 py-3 px-1 text-sm font-medium transition-colors duration-200
+                          ${isActive(item) ? "text-[#4caf50]" : "text-gray-700"}`}
+                      >
+                        {item.label}
                       </Link>
-                    ))}
-                  </div>
-                )}
+                      {(item.children || item.megaMenu) && (
+                        <button
+                          onClick={() => setMobileExpanded((prev) => prev === item.label ? null : item.label)}
+                          className="p-2.5 text-gray-400 hover:text-[#1a2e5a] transition-colors"
+                          aria-label={`Expand ${item.label}`}
+                        >
+                          <ChevronDown size={15}
+                            className={`transition-transform duration-200 ${mobileExpanded === item.label ? "rotate-180" : ""}`} />
+                        </button>
+                      )}
+                    </div>
 
-                {/* Mega menu children (flattened) */}
-                {item.megaMenu && mobileExpanded === item.label && (
-                  <div className="ml-3 mb-3 border-l-2 border-[#4caf50] pl-3 animate__animated animate__fadeIn animate__faster">
-                    {item.megaMenu.columns.map((col) => (
-                      <div key={col.heading} className="mb-3">
-                        <p className="text-xs font-bold text-[#1a2e5a] uppercase tracking-wide mb-1.5">{col.heading}</p>
-                        <div className="flex flex-col gap-0.5">
-                          {col.links.map((link) => (
-                            <Link key={link.label} href={link.href}
-                              onClick={() => setMobileOpen(false)}
-                              className="py-1.5 px-1 text-sm text-gray-600 hover:text-[#4caf50] transition-colors duration-200">
-                              {link.label}
-                            </Link>
-                          ))}
-                        </div>
+                    {/* Simple children */}
+                    {item.children && mobileExpanded === item.label && (
+                      <div className="ml-3 mb-2 border-l-2 border-[#4caf50] pl-3 flex flex-col gap-0.5 animate__animated animate__fadeIn animate__faster">
+                        {item.children.map((child) => (
+                          <Link key={child.label} href={child.href}
+                            onClick={() => setMobileOpen(false)}
+                            className="py-2 px-1 text-sm text-gray-600 hover:text-[#4caf50] transition-colors duration-200">
+                            {child.label}
+                          </Link>
+                        ))}
                       </div>
-                    ))}
-                  </div>
+                    )}
+
+                    {/* Mega menu children (flattened) */}
+                    {item.megaMenu && mobileExpanded === item.label && (
+                      <div className="ml-3 mb-3 border-l-2 border-[#4caf50] pl-3 animate__animated animate__fadeIn animate__faster">
+                        {item.megaMenu.columns.map((col) => (
+                          <div key={col.heading} className="mb-3">
+                            <p className="text-xs font-bold text-[#1a2e5a] uppercase tracking-wide mb-1.5">{col.heading}</p>
+                            <div className="flex flex-col gap-0.5">
+                              {col.links.map((link) => (
+                                <Link key={link.label} href={link.href}
+                                  onClick={() => setMobileOpen(false)}
+                                  className="py-1.5 px-1 text-sm text-gray-600 hover:text-[#4caf50] transition-colors duration-200">
+                                  {link.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
             ))}
