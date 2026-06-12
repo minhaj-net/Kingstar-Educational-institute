@@ -4,122 +4,54 @@ import PageHero from "../components/PageHero";
 import {
   FlaskConical, BookOpen, Microscope, Globe2, Users, TrendingUp,
   ArrowRight, ChevronRight, Award, Lightbulb, CheckCircle, Building2,
+  type LucideIcon,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Research Overview | Kingster University",
   description:
-    "Discover world-class research at Kingster University — cutting-edge labs, interdisciplinary studies, and groundbreaking publications across every discipline.",
+    "Discover world-class research at Kingster University — cutting-edge labs, interdisciplinary studies, and groundbreaking publications.",
 };
 
-// ─── Data ─────────────────────────────────────────────────────────────────────
+// ─── Icon map (JSON stores icon names as strings) ────────────────────────────
 
-const stats = [
-  { value: "$420M", label: "Annual Research Funding", icon: TrendingUp },
-  { value: "340+", label: "Active Research Projects", icon: FlaskConical },
-  { value: "89", label: "Research Labs & Centers", icon: Microscope },
-  { value: "1,600+", label: "Published Papers (2024)", icon: BookOpen },
-];
+const iconMap: Record<string, LucideIcon> = {
+  TrendingUp, FlaskConical, Microscope, BookOpen,
+  Globe2, Lightbulb, Users, Building2, Award,
+};
 
-const focusAreas = [
-  {
-    icon: FlaskConical,
-    title: "Biomedical Sciences",
-    desc: "From genomics to drug discovery, our biomedical researchers are redefining human health outcomes.",
-    color: "#4caf50",
-    count: "42 Projects",
-  },
-  {
-    icon: Globe2,
-    title: "Climate & Environment",
-    desc: "Cross-disciplinary teams tackling climate change, sustainability, and ecological preservation.",
-    color: "#1a2e5a",
-    count: "38 Projects",
-  },
-  {
-    icon: Lightbulb,
-    title: "Artificial Intelligence",
-    desc: "Advancing machine learning, computer vision, NLP, and ethical AI frameworks.",
-    color: "#c8a84b",
-    count: "61 Projects",
-  },
-  {
-    icon: Users,
-    title: "Social Sciences",
-    desc: "Evidence-based research in public policy, behavioral economics, and community development.",
-    color: "#4caf50",
-    count: "29 Projects",
-  },
-  {
-    icon: Building2,
-    title: "Engineering & Technology",
-    desc: "Pioneering breakthroughs in materials science, robotics, and civil infrastructure.",
-    color: "#1a2e5a",
-    count: "55 Projects",
-  },
-  {
-    icon: Award,
-    title: "Humanities & Arts",
-    desc: "Interdisciplinary research in history, culture, linguistics, and the digital humanities.",
-    color: "#c8a84b",
-    count: "18 Projects",
-  },
-];
+// ─── Types ────────────────────────────────────────────────────────────────────
 
-const featuredProjects = [
-  {
-    tag: "Biomedical",
-    tagColor: "#4caf50",
-    title: "Next-Generation mRNA Vaccine Platforms",
-    pi: "Prof. Elena Vasquez",
-    dept: "School of Medicine",
-    funding: "$12.4M — NIH Grant",
-    year: "2022–2026",
-    desc: "Developing scalable, thermostable mRNA delivery systems for rapid vaccine response against emerging pathogens.",
-  },
-  {
-    tag: "AI & Computing",
-    tagColor: "#c8a84b",
-    title: "Ethical Frameworks for Autonomous Decision Systems",
-    pi: "Prof. David Kwon",
-    dept: "Department of Computer Science",
-    funding: "$8.7M — NSF Grant",
-    year: "2023–2027",
-    desc: "Establishing governance models and technical guardrails to ensure fair, transparent AI in public-sector deployment.",
-  },
-  {
-    tag: "Climate",
-    tagColor: "#1a2e5a",
-    title: "Carbon Sequestration in Urban Ecosystems",
-    pi: "Prof. Amara Diallo",
-    dept: "Environmental Science",
-    funding: "$6.1M — EPA Grant",
-    year: "2021–2025",
-    desc: "Measuring and optimizing urban tree canopy carbon capture across 12 major metropolitan regions.",
-  },
-];
+interface Stat        { value: string; label: string; icon: string; }
+interface FocusArea   { icon: string; title: string; desc: string; color: string; count: string; }
+interface Project     { tag: string; tagColor: string; title: string; pi: string; dept: string; funding: string; year: string; desc: string; }
+interface Milestone   { year: string; event: string; }
 
-const milestones = [
-  { year: "1954", event: "Founding of the Kingster Research Institute" },
-  { year: "1978", event: "First NSF Center of Excellence designation" },
-  { year: "1993", event: "Breakthrough in polymer chemistry, 3 patents filed" },
-  { year: "2007", event: "Opened the Advanced Biomedical Sciences Complex" },
-  { year: "2015", event: "KU AI Lab ranked Top-10 globally by Nature Index" },
-  { year: "2024", event: "Research funding surpasses $420M for the first time" },
-];
+interface ResearchData {
+  stats: Stat[];
+  missionPoints: string[];
+  focusAreas: FocusArea[];
+  featuredProjects: Project[];
+  milestones: Milestone[];
+  partners: string[];
+}
 
-const partners = [
-  "National Institutes of Health (NIH)",
-  "National Science Foundation (NSF)",
-  "DARPA",
-  "Bill & Melinda Gates Foundation",
-  "World Health Organization",
-  "Google DeepMind",
-];
+// ─── Data fetch ───────────────────────────────────────────────────────────────
+
+async function getData(): Promise<ResearchData> {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000"}/research-overview.json`,
+    { cache: "no-store" }
+  );
+  return res.json();
+}
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-export default function ResearchOverviewPage() {
+export default async function ResearchOverviewPage() {
+  const data = await getData();
+  const { stats, missionPoints, focusAreas, featuredProjects, milestones, partners } = data;
+
   return (
     <main>
       <PageHero
@@ -136,17 +68,20 @@ export default function ResearchOverviewPage() {
       <section className="bg-[#1a2e5a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
-            {stats.map(({ value, label, icon: Icon }) => (
-              <div key={label} className="flex flex-col sm:flex-row items-center gap-3 px-6 py-8 text-center sm:text-left">
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-5 h-5 text-[#4caf50]" />
+            {stats.map(({ value, label, icon }) => {
+              const Icon = iconMap[icon] ?? FlaskConical;
+              return (
+                <div key={label} className="flex flex-col sm:flex-row items-center gap-3 px-6 py-8 text-center sm:text-left">
+                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-[#4caf50]" />
+                  </div>
+                  <div>
+                    <p className="text-2xl sm:text-3xl font-bold text-white leading-none">{value}</p>
+                    <p className="text-xs text-white/60 mt-1">{label}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-2xl sm:text-3xl font-bold text-white leading-none">{value}</p>
-                  <p className="text-xs text-white/60 mt-1">{label}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -161,18 +96,12 @@ export default function ResearchOverviewPage() {
                 Research That Changes <br className="hidden sm:block" /> the World
               </h2>
               <p className="text-gray-500 leading-relaxed">
-                At Kingster University, research is not a departmental function — it is the heartbeat of our institution.
-                Our faculty, students, and external partners collaborate across disciplines to generate knowledge that
-                directly addresses society&apos;s greatest challenges.
+                At Kingster University, research is the heartbeat of our institution. Our faculty, students,
+                and external partners collaborate across disciplines to generate knowledge that directly
+                addresses society&apos;s greatest challenges.
               </p>
               <ul className="space-y-3">
-                {[
-                  "Fully funded PhD and postdoc programs",
-                  "State-of-the-art laboratory infrastructure",
-                  "Industry & government partnerships for real-world impact",
-                  "Open-access publication policy",
-                  "Annual Research Excellence Awards",
-                ].map((item) => (
+                {missionPoints.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-[#4caf50] flex-shrink-0 mt-0.5" />
                     {item}
@@ -190,7 +119,6 @@ export default function ResearchOverviewPage() {
                 </Link>
               </div>
             </div>
-            {/* Image collage */}
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="rounded-xl overflow-hidden h-48 bg-gray-100">
@@ -224,21 +152,24 @@ export default function ResearchOverviewPage() {
             <p className="text-gray-500 mt-4">Spanning science, technology, humanities, and beyond.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {focusAreas.map(({ icon: Icon, title, desc, color, count }) => (
-              <div key={title} className="bg-white rounded-xl p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${color}15` }}>
-                    <Icon className="w-5 h-5" style={{ color }} />
+            {focusAreas.map(({ icon, title, desc, color, count }) => {
+              const Icon = iconMap[icon] ?? FlaskConical;
+              return (
+                <div key={title} className="bg-white rounded-xl p-7 border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${color}15` }}>
+                      <Icon className="w-5 h-5" style={{ color }} />
+                    </div>
+                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-500">{count}</span>
                   </div>
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-500">{count}</span>
+                  <h3 className="font-bold text-[#1a2e5a] mb-2">{title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
+                  <div className="flex items-center gap-1 mt-4 text-xs font-semibold" style={{ color }}>
+                    Learn more <ChevronRight className="w-3.5 h-3.5" />
+                  </div>
                 </div>
-                <h3 className="font-bold text-[#1a2e5a] mb-2">{title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
-                <div className="flex items-center gap-1 mt-4 text-xs font-semibold" style={{ color }}>
-                  Learn more <ChevronRight className="w-3.5 h-3.5" />
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -261,7 +192,8 @@ export default function ResearchOverviewPage() {
               <div key={title} className="flex flex-col rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
                 <div className="h-2" style={{ backgroundColor: tagColor }} />
                 <div className="p-7 flex flex-col gap-4 flex-1">
-                  <span className="text-xs font-bold px-2.5 py-1 rounded-full w-fit" style={{ backgroundColor: `${tagColor}15`, color: tagColor }}>
+                  <span className="text-xs font-bold px-2.5 py-1 rounded-full w-fit"
+                    style={{ backgroundColor: `${tagColor}15`, color: tagColor }}>
                     {tag}
                   </span>
                   <h3 className="font-bold text-[#1a2e5a] leading-snug">{title}</h3>
@@ -279,7 +211,7 @@ export default function ResearchOverviewPage() {
         </div>
       </section>
 
-      {/* ── Timeline ── */}
+      {/* ── Milestones ── */}
       <section className="py-20 bg-[#1a2e5a]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">

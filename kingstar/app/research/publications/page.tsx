@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import PageHero from "../../components/PageHero";
 import {
@@ -8,96 +8,44 @@ import {
   ArrowRight, ExternalLink, Search, Filter, Download,
 } from "lucide-react";
 
-// ─── Data ─────────────────────────────────────────────────────────────────────
+// ─── Types ────────────────────────────────────────────────────────────────────
 
-const stats = [
-  { value: "1,600+", label: "Papers Published in 2024", icon: FileText },
-  { value: "28,400+", label: "Total Citations (2024)", icon: TrendingUp },
-  { value: "94", label: "H-Index (Institutional)", icon: Award },
-  { value: "12", label: "Nature / Science Articles", icon: BookOpen },
-];
+interface Stat        { value: string; label: string; icon: string; }
+interface Category    { label: string; count: number; }
+interface Publication {
+  type: string; typeColor: string; year: string;
+  title: string; authors: string; journal: string;
+  doi: string; tags: string[]; citations: number; featured: boolean;
+}
+interface Journal     { name: string; impact: string; }
 
-const categories = [
-  { label: "All Publications",       count: 4820 },
-  { label: "Journal Articles",       count: 2940 },
-  { label: "Conference Papers",      count: 1120 },
-  { label: "Books & Chapters",       count: 380  },
-  { label: "Technical Reports",      count: 280  },
-  { label: "Theses & Dissertations", count: 100  },
-];
+interface PubData {
+  stats: Stat[];
+  categories: Category[];
+  publications: Publication[];
+  topJournals: Journal[];
+}
 
-const publications = [
-  {
-    type: "Journal Article", typeColor: "#4caf50", year: "2024",
-    title: "Adaptive mRNA Delivery via Lipid Nanoparticle Engineering for Pandemic Preparedness",
-    authors: "Vasquez E., Chen L., Abubakar M., et al.",
-    journal: "Nature Biotechnology",
-    doi: "10.1038/s41587-024-00123-4",
-    tags: ["Biomedical", "Vaccine", "Nanotechnology"],
-    citations: 142, featured: true,
-  },
-  {
-    type: "Journal Article", typeColor: "#4caf50", year: "2024",
-    title: "Fairness Constraints in Large-Scale Recommendation Systems: A Causal Approach",
-    authors: "Kwon D., Patel R., Morrison A.",
-    journal: "NeurIPS 2024 Proceedings",
-    doi: "10.48550/arXiv.2411.05821",
-    tags: ["AI", "Ethics", "ML"],
-    citations: 88, featured: true,
-  },
-  {
-    type: "Conference Paper", typeColor: "#c8a84b", year: "2024",
-    title: "Urban Forest Carbon Accounting Using LiDAR-Enhanced Satellite Imagery",
-    authors: "Diallo A., Nguyen T., Ferreira C.",
-    journal: "ICCV 2024",
-    doi: "10.1109/ICCV2024.456789",
-    tags: ["Climate", "Remote Sensing", "GIS"],
-    citations: 51, featured: false,
-  },
-  {
-    type: "Journal Article", typeColor: "#4caf50", year: "2023",
-    title: "Behavioral Economics of Climate Policy Compliance in Emerging Economies",
-    authors: "Okonkwo B., Lindqvist P.",
-    journal: "American Economic Review",
-    doi: "10.1257/aer.20230456",
-    tags: ["Economics", "Climate", "Policy"],
-    citations: 214, featured: false,
-  },
-  {
-    type: "Book Chapter", typeColor: "#1a2e5a", year: "2023",
-    title: "Decolonizing the Digital Humanities: New Frameworks for Archival Justice",
-    authors: "Hassan N., Rivera M., Takahashi Y.",
-    journal: "Oxford Handbook of Digital Humanities (2nd ed.)",
-    doi: "10.1093/oxfordhb/9780198862444.013.22",
-    tags: ["Humanities", "Digital", "Culture"],
-    citations: 67, featured: false,
-  },
-  {
-    type: "Technical Report", typeColor: "#94a3b8", year: "2024",
-    title: "Structural Integrity Assessment of Carbon-Fibre Reinforced Concrete in Seismic Zones",
-    authors: "Zhang W., Osei K., Müller H.",
-    journal: "KU Engineering Research Reports, Vol. 14",
-    doi: "10.21203/ku.er.2024.14.022",
-    tags: ["Engineering", "Materials", "Structures"],
-    citations: 29, featured: false,
-  },
-];
-
-const journals = [
-  { name: "Nature Biotechnology", impact: "IF 46.9" },
-  { name: "Science",              impact: "IF 56.9" },
-  { name: "NeurIPS Proceedings",  impact: "Top-tier CS" },
-  { name: "American Economic Review", impact: "IF 24.5" },
-  { name: "Lancet",               impact: "IF 98.4" },
-  { name: "IEEE Transactions",    impact: "IF 11.8" },
-];
+const statIconMap: Record<string, React.ElementType> = {
+  FileText, TrendingUp, Award, BookOpen,
+};
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function PublicationsPage() {
+  const [data, setData] = useState<PubData | null>(null);
   const [search, setSearch] = useState("");
   const [activeYear, setActiveYear] = useState<string | null>(null);
   const [activeType, setActiveType] = useState("All Publications");
+
+  useEffect(() => {
+    fetch("/research-publications.json")
+      .then((r) => r.json())
+      .then((d: PubData) => setData(d))
+      .catch(console.error);
+  }, []);
+
+  const publications = data?.publications ?? [];
 
   const filtered = publications.filter((pub) => {
     const q = search.toLowerCase();
@@ -106,7 +54,7 @@ export default function PublicationsPage() {
       pub.title.toLowerCase().includes(q) ||
       pub.authors.toLowerCase().includes(q) ||
       pub.tags.some((t) => t.toLowerCase().includes(q));
-    const matchYear  = !activeYear || pub.year === activeYear;
+    const matchYear = !activeYear || pub.year === activeYear;
     const typeMap: Record<string, string[]> = {
       "Journal Articles":       ["Journal Article"],
       "Conference Papers":      ["Conference Paper"],
@@ -118,6 +66,37 @@ export default function PublicationsPage() {
     const matchType = activeType === "All Publications" || (allowed?.includes(pub.type) ?? false);
     return matchSearch && matchYear && matchType;
   });
+
+  // ── Loading skeleton ──
+  if (!data) {
+    return (
+      <main>
+        <PageHero
+          title="Publications"
+          eyebrow="Research Output"
+          image="/slide-3.jpg"
+          breadcrumbs={[
+            { label: "Research", href: "/research" },
+            { label: "Publications", href: "/research/publications" },
+          ]}
+        />
+        <div className="bg-[#1a2e5a] py-10">
+          <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="h-24 rounded-xl bg-white/10 animate-pulse" />
+            ))}
+          </div>
+        </div>
+        <div className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 space-y-4">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="h-32 rounded-xl bg-white animate-pulse border border-gray-100" />
+            ))}
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main>
@@ -135,22 +114,25 @@ export default function PublicationsPage() {
       <section className="bg-[#1a2e5a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
-            {stats.map(({ value, label, icon: Icon }) => (
-              <div key={label} className="flex flex-col sm:flex-row items-center gap-3 px-6 py-8 text-center sm:text-left">
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-5 h-5 text-[#4caf50]" />
+            {data.stats.map(({ value, label, icon }) => {
+              const Icon = statIconMap[icon] ?? TrendingUp;
+              return (
+                <div key={label} className="flex flex-col sm:flex-row items-center gap-3 px-6 py-8 text-center sm:text-left">
+                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-[#4caf50]" />
+                  </div>
+                  <div>
+                    <p className="text-2xl sm:text-3xl font-bold text-white leading-none">{value}</p>
+                    <p className="text-xs text-white/60 mt-1">{label}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-2xl sm:text-3xl font-bold text-white leading-none">{value}</p>
-                  <p className="text-xs text-white/60 mt-1">{label}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* ── Search + Filter bar ── */}
+      {/* ── Search + Filter ── */}
       <section className="py-8 bg-white border-b border-gray-100 sticky top-[72px] z-30 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
@@ -200,7 +182,7 @@ export default function PublicationsPage() {
                   Publication Type
                 </h3>
                 <ul className="space-y-1">
-                  {categories.map(({ label, count }) => (
+                  {data.categories.map(({ label, count }) => (
                     <li key={label}>
                       <button
                         onClick={() => setActiveType(label)}
@@ -227,11 +209,9 @@ export default function PublicationsPage() {
                 </ul>
 
                 <div className="mt-6 pt-5 border-t border-gray-100">
-                  <h4 className="text-xs font-bold text-[#1a2e5a] uppercase tracking-wider mb-3">
-                    Top Journals
-                  </h4>
+                  <h4 className="text-xs font-bold text-[#1a2e5a] uppercase tracking-wider mb-3">Top Journals</h4>
                   <ul className="space-y-2">
-                    {journals.map(({ name, impact }) => (
+                    {data.topJournals.map(({ name, impact }) => (
                       <li key={name} className="flex items-center justify-between text-xs">
                         <span className="text-gray-600 leading-snug">{name}</span>
                         <span className="text-[#4caf50] font-semibold ml-2 whitespace-nowrap">{impact}</span>
@@ -242,7 +222,7 @@ export default function PublicationsPage() {
               </div>
             </aside>
 
-            {/* Publication list */}
+            {/* List */}
             <div className="lg:col-span-3 space-y-4">
               {filtered.length === 0 ? (
                 <div className="bg-white rounded-xl border border-gray-100 p-16 text-center">
@@ -264,28 +244,21 @@ export default function PublicationsPage() {
                         <span className="text-xs font-bold text-[#4caf50] uppercase tracking-wider">Featured</span>
                       </div>
                     )}
-
                     <div className="flex flex-wrap items-center gap-2">
-                      <span
-                        className="text-xs font-semibold px-2.5 py-1 rounded-full"
-                        style={{ backgroundColor: `${pub.typeColor}15`, color: pub.typeColor }}
-                      >
+                      <span className="text-xs font-semibold px-2.5 py-1 rounded-full"
+                        style={{ backgroundColor: `${pub.typeColor}15`, color: pub.typeColor }}>
                         {pub.type}
                       </span>
                       <span className="text-xs text-gray-400">{pub.year}</span>
                       {pub.tags.map((tag) => (
-                        <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500">
-                          {tag}
-                        </span>
+                        <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500">{tag}</span>
                       ))}
                     </div>
-
                     <div>
                       <h3 className="font-bold text-[#1a2e5a] leading-snug mb-1">{pub.title}</h3>
                       <p className="text-sm text-gray-500">{pub.authors}</p>
                       <p className="text-sm text-gray-400 italic mt-0.5">{pub.journal}</p>
                     </div>
-
                     <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-gray-100">
                       <div className="flex items-center gap-4 text-xs text-gray-400">
                         <span className="flex items-center gap-1">
@@ -293,12 +266,8 @@ export default function PublicationsPage() {
                         </span>
                         <span className="font-mono hidden sm:inline">DOI: {pub.doi}</span>
                       </div>
-                      <a
-                        href={`https://doi.org/${pub.doi}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#4caf50] hover:text-[#43a047] transition-colors"
-                      >
+                      <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#4caf50] hover:text-[#43a047] transition-colors">
                         View Paper <ExternalLink className="w-3 h-3" />
                       </a>
                     </div>
@@ -306,22 +275,14 @@ export default function PublicationsPage() {
                 ))
               )}
 
-              {/* Pagination */}
               <div className="flex items-center justify-between pt-4">
-                <p className="text-sm text-gray-500">
-                  Showing {filtered.length} results
-                </p>
+                <p className="text-sm text-gray-500">Showing {filtered.length} results</p>
                 <div className="flex items-center gap-1">
                   {[1, 2, 3, "...", 804].map((p, i) => (
-                    <button
-                      key={i}
-                      className="w-8 h-8 rounded-lg text-xs font-medium transition-colors"
-                      style={
-                        p === 1
-                          ? { backgroundColor: "#4caf50", color: "white" }
-                          : { backgroundColor: "white", border: "1px solid #e5e7eb", color: "#6b7280" }
-                      }
-                    >
+                    <button key={i} className="w-8 h-8 rounded-lg text-xs font-medium transition-colors"
+                      style={p === 1
+                        ? { backgroundColor: "#4caf50", color: "white" }
+                        : { backgroundColor: "white", border: "1px solid #e5e7eb", color: "#6b7280" }}>
                       {p}
                     </button>
                   ))}
@@ -338,16 +299,12 @@ export default function PublicationsPage() {
       {/* ── CTA ── */}
       <section className="py-16 bg-[#1a2e5a]">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Want to Collaborate on Research?
-          </h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Want to Collaborate on Research?</h2>
           <p className="text-white/70 mb-8 leading-relaxed">
             Our faculty welcome industry partnerships, joint grants, and interdisciplinary collaborations.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#4caf50] hover:bg-[#43a047] text-white text-sm font-bold rounded-sm transition-colors"
-          >
+          <Link href="/contact"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#4caf50] hover:bg-[#43a047] text-white text-sm font-bold rounded-sm transition-colors">
             Get in Touch <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
