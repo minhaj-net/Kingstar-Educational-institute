@@ -1,0 +1,107 @@
+{
+  "stats": [
+    { "value": "$420M", "label": "Annual Research Funding", "icon": "TrendingUp" },
+    { "value": "340+",  "label": "Active Research Projects", "icon": "FlaskConical" },
+    { "value": "89",    "label": "Research Labs & Centers",  "icon": "Microscope" },
+    { "value": "1,600+","label": "Published Papers (2024)",  "icon": "BookOpen" }
+  ],
+  "missionPoints": [
+    "Fully funded PhD and postdoc programs",
+    "State-of-the-art laboratory infrastructure",
+    "Industry & government partnerships for real-world impact",
+    "Open-access publication policy",
+    "Annual Research Excellence Awards"
+  ],
+  "focusAreas": [
+    {
+      "icon": "FlaskConical",
+      "title": "Biomedical Sciences",
+      "desc": "From genomics to drug discovery, our biomedical researchers are redefining human health outcomes.",
+      "color": "#4caf50",
+      "count": "42 Projects"
+    },
+    {
+      "icon": "Globe2",
+      "title": "Climate & Environment",
+      "desc": "Cross-disciplinary teams tackling climate change, sustainability, and ecological preservation.",
+      "color": "#1a2e5a",
+      "count": "38 Projects"
+    },
+    {
+      "icon": "Lightbulb",
+      "title": "Artificial Intelligence",
+      "desc": "Advancing machine learning, computer vision, NLP, and ethical AI frameworks.",
+      "color": "#c8a84b",
+      "count": "61 Projects"
+    },
+    {
+      "icon": "Users",
+      "title": "Social Sciences",
+      "desc": "Evidence-based research in public policy, behavioral economics, and community development.",
+      "color": "#4caf50",
+      "count": "29 Projects"
+    },
+    {
+      "icon": "Building2",
+      "title": "Engineering & Technology",
+      "desc": "Pioneering breakthroughs in materials science, robotics, and civil infrastructure.",
+      "color": "#1a2e5a",
+      "count": "55 Projects"
+    },
+    {
+      "icon": "Award",
+      "title": "Humanities & Arts",
+      "desc": "Interdisciplinary research in history, culture, linguistics, and the digital humanities.",
+      "color": "#c8a84b",
+      "count": "18 Projects"
+    }
+  ],
+  "featuredProjects": [
+    {
+      "tag": "Biomedical",
+      "tagColor": "#4caf50",
+      "title": "Next-Generation mRNA Vaccine Platforms",
+      "pi": "Prof. Elena Vasquez",
+      "dept": "School of Medicine",
+      "funding": "$12.4M — NIH Grant",
+      "year": "2022–2026",
+      "desc": "Developing scalable, thermostable mRNA delivery systems for rapid vaccine response against emerging pathogens."
+    },
+    {
+      "tag": "AI & Computing",
+      "tagColor": "#c8a84b",
+      "title": "Ethical Frameworks for Autonomous Decision Systems",
+      "pi": "Prof. David Kwon",
+      "dept": "Department of Computer Science",
+      "funding": "$8.7M — NSF Grant",
+      "year": "2023–2027",
+      "desc": "Establishing governance models and technical guardrails to ensure fair, transparent AI in public-sector deployment."
+    },
+    {
+      "tag": "Climate",
+      "tagColor": "#1a2e5a",
+      "title": "Carbon Sequestration in Urban Ecosystems",
+      "pi": "Prof. Amara Diallo",
+      "dept": "Environmental Science",
+      "funding": "$6.1M — EPA Grant",
+      "year": "2021–2025",
+      "desc": "Measuring and optimizing urban tree canopy carbon capture across 12 major metropolitan regions."
+    }
+  ],
+  "milestones": [
+    { "year": "1954", "event": "Founding of the Kingster Research Institute" },
+    { "year": "1978", "event": "First NSF Center of Excellence designation" },
+    { "year": "1993", "event": "Breakthrough in polymer chemistry, 3 patents filed" },
+    { "year": "2007", "event": "Opened the Advanced Biomedical Sciences Complex" },
+    { "year": "2015", "event": "KU AI Lab ranked Top-10 globally by Nature Index" },
+    { "year": "2024", "event": "Research funding surpasses $420M for the first time" }
+  ],
+  "partners": [
+    "National Institutes of Health (NIH)",
+    "National Science Foundation (NSF)",
+    "DARPA",
+    "Bill & Melinda Gates Foundation",
+    "World Health Organization",
+    "Google DeepMind"
+  ]
+}

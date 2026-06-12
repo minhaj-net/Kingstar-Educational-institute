@@ -1,0 +1,164 @@
+{
+  "stats": [
+    { "value": "89",    "label": "Labs & Centers",          "icon": "FlaskConical" },
+    { "value": "420+",  "label": "Research Staff",           "icon": "Users" },
+    { "value": "$420M", "label": "Annual Funding",           "icon": "Award" },
+    { "value": "6",     "label": "Major Research Clusters",  "icon": "Building2" }
+  ],
+  "clusters": [
+    {
+      "icon": "HeartPulse",
+      "name": "Biomedical & Health Sciences",
+      "color": "#4caf50",
+      "labCount": 18,
+      "desc": "Advancing human health through genomics, drug discovery, neuroscience, and clinical trials.",
+      "labs": [
+        "Center for Genomic Medicine",
+        "KU Neuroscience Institute",
+        "Drug Discovery & Development Lab",
+        "Clinical Trials Unit",
+        "Immunology & Infectious Disease Center"
+      ]
+    },
+    {
+      "icon": "Cpu",
+      "name": "AI, Data & Computing",
+      "color": "#1a2e5a",
+      "labCount": 22,
+      "desc": "Pioneering machine learning, computer vision, cybersecurity, and human-computer interaction.",
+      "labs": [
+        "KU Artificial Intelligence Lab",
+        "Center for Cybersecurity Research",
+        "Human-Computer Interaction Lab",
+        "Quantum Computing Initiative",
+        "Data Science & Analytics Center"
+      ]
+    },
+    {
+      "icon": "Leaf",
+      "name": "Climate & Sustainability",
+      "color": "#c8a84b",
+      "labCount": 14,
+      "desc": "Addressing climate change, renewable energy, and ecological systems at regional and global scales.",
+      "labs": [
+        "Climate Science Research Center",
+        "Renewable Energy Lab",
+        "Marine & Coastal Ecology Lab",
+        "Urban Sustainability Institute",
+        "Carbon Capture Research Unit"
+      ]
+    },
+    {
+      "icon": "FlaskConical",
+      "name": "Physical & Chemical Sciences",
+      "color": "#4caf50",
+      "labCount": 17,
+      "desc": "Groundbreaking discoveries in materials science, photonics, nanotechnology, and quantum chemistry.",
+      "labs": [
+        "Advanced Materials Lab",
+        "Photonics & Optics Center",
+        "Nanofabrication Facility",
+        "Theoretical Chemistry Lab",
+        "Plasma Physics Research Unit"
+      ]
+    },
+    {
+      "icon": "Globe2",
+      "name": "Social Sciences & Policy",
+      "color": "#1a2e5a",
+      "labCount": 10,
+      "desc": "Evidence-based research on public policy, urban planning, behavioral economics, and global governance.",
+      "labs": [
+        "Center for Public Policy Studies",
+        "Urban Development Research Lab",
+        "Behavioral Economics Lab",
+        "Global Governance Institute",
+        "Health Policy Analysis Center"
+      ]
+    },
+    {
+      "icon": "Zap",
+      "name": "Engineering & Innovation",
+      "color": "#c8a84b",
+      "labCount": 8,
+      "desc": "Translational engineering from robotics and structural design to aerospace and smart infrastructure.",
+      "labs": [
+        "Robotics & Automation Lab",
+        "Structural Engineering Research Center",
+        "Aerospace Systems Lab",
+        "Smart Infrastructure Initiative",
+        "Bioengineering & Biomechanics Lab"
+      ]
+    }
+  ],
+  "featuredLabs": [
+    {
+      "name": "KU Artificial Intelligence Lab",
+      "shortName": "KU-AIL",
+      "cluster": "AI, Data & Computing",
+      "clusterColor": "#1a2e5a",
+      "director": "Prof. David Kwon",
+      "founded": "2010",
+      "staff": "62 researchers",
+      "location": "Engineering Tower, Floor 8–10",
+      "funding": "$38M (active grants)",
+      "desc": "One of the top-10 AI labs in North America, KU-AIL conducts fundamental and applied research across machine learning, NLP, computer vision, and the ethics of autonomous systems.",
+      "achievements": [
+        "Nature Machine Intelligence publication (2024)",
+        "Best Paper Award — NeurIPS 2023",
+        "4 active DARPA contracts",
+        "Partnership with Google DeepMind"
+      ]
+    },
+    {
+      "name": "Center for Genomic Medicine",
+      "shortName": "CGM",
+      "cluster": "Biomedical & Health Sciences",
+      "clusterColor": "#4caf50",
+      "director": "Prof. Elena Vasquez",
+      "founded": "2005",
+      "staff": "84 researchers",
+      "location": "Medical Sciences Building, Wing C",
+      "funding": "$67M (NIH + private)",
+      "desc": "A world leader in translational genomics, CGM bridges the gap between basic genome science and clinical application — from rare disease diagnosis to precision cancer therapy.",
+      "achievements": [
+        "Science magazine cover feature (2024)",
+        "12 FDA Breakthrough Therapy designations supported",
+        "3 spinout biotech companies",
+        "Genome sequencing of 50,000+ patients"
+      ]
+    },
+    {
+      "name": "Climate Science Research Center",
+      "shortName": "CSRC",
+      "cluster": "Climate & Sustainability",
+      "clusterColor": "#c8a84b",
+      "director": "Prof. Amara Diallo",
+      "founded": "1998",
+      "staff": "41 researchers",
+      "location": "Environmental Sciences Complex",
+      "funding": "$22M (EPA + EU Horizon)",
+      "desc": "CSRC integrates satellite remote sensing, climate modeling, and field ecology to produce actionable climate data used by governments and the IPCC.",
+      "achievements": [
+        "Contributing authors to IPCC AR6 Report",
+        "EPA Center of Excellence designation",
+        "Largest urban carbon database in North America",
+        "Policy briefs adopted by 9 state governments"
+      ]
+    }
+  ],
+  "facilities": [
+    { "name": "Electron Microscopy Suite",          "desc": "Sub-angstrom resolution TEM/SEM facility with cryo-EM capability." },
+    { "name": "High-Performance Computing Cluster", "desc": "5,000+ GPU cluster for large-scale AI and simulation workloads." },
+    { "name": "BSL-3 Biocontainment Lab",            "desc": "Certified facility for high-risk pathogen research." },
+    { "name": "Nanofabrication Cleanroom",           "desc": "Class 100 cleanroom for semiconductor and nanodevice fabrication." },
+    { "name": "Wind Tunnel Facility",                "desc": "Subsonic and supersonic wind tunnels for aerospace and structural research." },
+    { "name": "MRI Research Suite",                  "desc": "7-Tesla research MRI scanner dedicated to neuroscience studies." }
+  ],
+  "contact": {
+    "phone": "+1 (343) 523-5622",
+    "email": "research@kingster.edu",
+    "location": "Research Park, Building R1",
+    "hours": "Mon–Fri, 9am–5pm"
+  }
+}

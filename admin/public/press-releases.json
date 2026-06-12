@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "slug": "research-funding-milestone-2025",
+    "title": "Kingster University Surpasses $420M Annual Research Funding",
+    "date": "March 15, 2025",
+    "category": "Research",
+    "contact": "media@kingster.edu",
+    "excerpt": "Kingster University today announced that its annual research funding has exceeded $420 million for the first time in institutional history, marking a landmark achievement in the university's century-long commitment to advancing knowledge.",
+    "body": "KINGSTER CITY, March 15, 2025 — Kingster University today announced that its annual research funding has exceeded $420 million, a historic milestone made possible through a combination of federal grants, industry partnerships, and philanthropic investments. The funding supports over 340 active research projects across the university's six interdisciplinary research clusters.\n\nPresident Dr. Margaret Howell stated: \"This milestone reflects the extraordinary dedication of our faculty, students, and research staff. It is a testament to Kingster's growing role as a global leader in innovation and discovery.\"\n\nThe funding includes a $67 million NIH grant to the Center for Genomic Medicine, four DARPA contracts totaling $24 million for AI ethics research, and a $22 million EPA grant supporting climate change research.",
+    "tags": ["Research", "Funding", "Milestone"]
+  },
+  {
+    "id": 2,
+    "slug": "ku-ail-expansion-2025",
+    "title": "KU AI Lab Opens Expanded Research Facility",
+    "date": "February 28, 2025",
+    "category": "Technology",
+    "contact": "media@kingster.edu",
+    "excerpt": "Kingster University's Artificial Intelligence Lab has officially inaugurated its expanded 10,000 square-foot facility, equipped with 5,000+ GPU computing infrastructure and collaborative research spaces.",
+    "body": "KINGSTER CITY, February 28, 2025 — The KU Artificial Intelligence Lab (KU-AIL), ranked among the top-10 AI research centers in North America, today opened its newly expanded facility at the Engineering Tower. The 10,000 sq ft space accommodates 62 researchers and features a dedicated GPU computing cluster capable of processing petabyte-scale datasets.\n\nDirector Prof. David Kwon commented: \"This expansion marks a new chapter for KU-AIL. Our researchers will now have the infrastructure to tackle the most complex challenges in machine learning, computer vision, and ethical AI at a scale previously impossible.\"\n\nThe expansion was funded through a combination of university capital investment and four active DARPA research contracts.",
+    "tags": ["AI", "Technology", "Facility"]
+  },
+  {
+    "id": 3,
+    "slug": "spring-commencement-2025",
+    "title": "Kingster University Announces Spring 2025 Commencement Details",
+    "date": "January 30, 2025",
+    "category": "Academic",
+    "contact": "registrar@kingster.edu",
+    "excerpt": "Kingster University will hold its Spring 2025 Commencement Ceremony on May 18, 2025, celebrating 4,200 graduates representing 140 programs from 92 countries.",
+    "body": "KINGSTER CITY, January 30, 2025 — Kingster University's Office of the Registrar today announced details for the Spring 2025 Commencement Ceremony, to be held on Sunday, May 18, 2025 at the KU Arena.\n\nThis year's ceremony will celebrate 4,200 graduates spanning undergraduate, graduate, doctoral, and certificate programs. The ceremony will include two sessions to accommodate graduates from all faculties.\n\nKeynote speaker: Ambassador Dr. Yuki Tanaka, internationally recognized diplomat and KU alumna (Class of 1998).\n\nTicket allocation: Each graduate will receive four guest tickets. Additional tickets may be requested through the Registrar's Office.",
+    "tags": ["Commencement", "Graduation", "Events"]
+  },
+  {
+    "id": 4,
+    "slug": "epa-center-excellence-csrc",
+    "title": "KU Climate Science Research Center Receives EPA Center of Excellence Designation",
+    "date": "December 20, 2024",
+    "category": "Research",
+    "contact": "research@kingster.edu",
+    "excerpt": "The Environmental Protection Agency has designated Kingster University's Climate Science Research Center as a Center of Excellence, unlocking $22 million in multi-year funding for environmental research.",
+    "body": "KINGSTER CITY, December 20, 2024 — The U.S. Environmental Protection Agency (EPA) today announced that Kingster University's Climate Science Research Center (CSRC) has been designated as an EPA Center of Excellence in Urban Climate Research.\n\nThe designation comes with a five-year, $22 million research grant to expand the center's satellite-based carbon accounting program and deepen partnerships with city governments across North America.\n\nCSRC Director Prof. Amara Diallo stated: \"This recognition validates the rigorous, data-driven methodology our team has developed over two decades. We look forward to scaling our impact and providing actionable climate data to policymakers at every level of government.\"",
+    "tags": ["Climate", "EPA", "Research", "Environment"]
+  },
+  {
+    "id": 5,
+    "slug": "qs-rankings-2025",
+    "title": "Kingster University Rises to #14 in QS National University Rankings",
+    "date": "December 5, 2024",
+    "category": "Academic",
+    "contact": "media@kingster.edu",
+    "excerpt": "QS World University Rankings 2025 has placed Kingster University at #14 nationally and #38 globally, reflecting significant improvements in research output, faculty citations, and employer reputation.",
+    "body": "KINGSTER CITY, December 5, 2024 — Quacquarelli Symonds (QS) today released its 2025 World University Rankings, placing Kingster University at #14 nationally — a five-position improvement — and #38 globally, up from #43 the previous year.\n\nThe improvement is attributed to a 28% increase in research citations per faculty, strong employer reputation scores in business and engineering, and a record international student ratio of 18.4%.\n\n\"This recognition reflects the collective efforts of our faculty, students, and administrative staff,\" said Provost Dr. James Okafor. \"We are particularly proud of our research impact metrics, which place us among the top institutions globally in biotechnology and computer science.\"",
+    "tags": ["Rankings", "QS", "Academic Excellence"]
+  },
+  {
+    "id": 6,
+    "slug": "wellness-center-opening-2025",
+    "title": "Kingster University Opens $18M Student Wellness Center",
+    "date": "January 8, 2025",
+    "category": "Campus",
+    "contact": "studentaffairs@kingster.edu",
+    "excerpt": "A new state-of-the-art Student Wellness Center has opened on Kingster University's North Campus, providing comprehensive mental health, fitness, and wellbeing services to all enrolled students.",
+    "body": "KINGSTER CITY, January 8, 2025 — Kingster University today officially opened the doors of its new $18 million Student Wellness Center on North Campus. The 24,000 sq ft facility represents the university's most significant investment in student wellbeing infrastructure in over two decades.\n\nThe center offers: licensed counseling and psychological services, a 120-station fitness floor, group exercise studios, nutrition counseling, and a meditation and mindfulness suite.\n\nVice President of Student Affairs Dr. Priya Sharma said: \"Student wellbeing is the foundation of academic success. This center will ensure every Kingster student has access to the support they need to thrive, both inside and outside the classroom.\"",
+    "tags": ["Campus", "Student Life", "Wellness", "Facilities"]
+  }
+]

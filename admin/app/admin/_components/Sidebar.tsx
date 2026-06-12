@@ -24,6 +24,8 @@ import {
   FileText,
   UserCircle,
   MapPin,
+  FlaskConical,
+  Microscope,
 } from "lucide-react";
 import { useThemeStore } from "@/store/themeStore";
 
@@ -150,7 +152,24 @@ const navGroups: NavGroup[] = [
         children: [
           { label: "All Posts",      href: "/admin/blogs",                icon: Newspaper },
           { label: "Add Post",       href: "/admin/blogs/add",            icon: FileText },
-          // { label: "Categories",     href: "/admin/blogs/categories",     icon: Tag },
+        ],
+      },
+      {
+        label: "News",
+        href: "/admin/news",
+        icon: Newspaper,
+        children: [
+          { label: "All News",       href: "/admin/news",                 icon: Newspaper },
+          { label: "Add News",       href: "/admin/news/add",             icon: FileText },
+        ],
+      },
+      {
+        label: "Press Releases",
+        href: "/admin/press-releases",
+        icon: FileText,
+        children: [
+          { label: "All Releases",   href: "/admin/press-releases",       icon: FileText },
+          { label: "Add Release",    href: "/admin/press-releases/add",   icon: FileText },
         ],
       },
       {
@@ -195,6 +214,38 @@ const navGroups: NavGroup[] = [
   //     },
   //   ],
   // },
+  {
+    group: "Research",
+    items: [
+      {
+        label: "Research Overview",
+        href: "/admin/research",
+        icon: FlaskConical,
+        children: [
+          { label: "All Sections",   href: "/admin/research",                    icon: FileText },
+          { label: "Add Project",    href: "/admin/research/projects/add",        icon: FileText },
+        ],
+      },
+      {
+        label: "Publications",
+        href: "/admin/research/publications",
+        icon: BookOpen,
+        children: [
+          { label: "All Publications", href: "/admin/research/publications",          icon: BookOpen },
+          { label: "Add Publication",  href: "/admin/research/publications/add",      icon: FileText },
+        ],
+      },
+      {
+        label: "Labs & Centers",
+        href: "/admin/research/labs-centers",
+        icon: Microscope,
+        children: [
+          { label: "All Labs",       href: "/admin/research/labs-centers",            icon: Microscope },
+          { label: "Add Lab",        href: "/admin/research/labs-centers/add-lab",    icon: FileText },
+        ],
+      },
+    ],
+  },
   {
     group: "System",
     items: [

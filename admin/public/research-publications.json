@@ -1,0 +1,104 @@
+{
+  "stats": [
+    { "value": "1,600+",  "label": "Papers Published in 2024",    "icon": "FileText" },
+    { "value": "28,400+", "label": "Total Citations (2024)",       "icon": "TrendingUp" },
+    { "value": "94",      "label": "H-Index (Institutional)",      "icon": "Award" },
+    { "value": "12",      "label": "Nature / Science Articles",    "icon": "BookOpen" }
+  ],
+  "categories": [
+    { "label": "All Publications",       "count": 4820 },
+    { "label": "Journal Articles",       "count": 2940 },
+    { "label": "Conference Papers",      "count": 1120 },
+    { "label": "Books & Chapters",       "count": 380  },
+    { "label": "Technical Reports",      "count": 280  },
+    { "label": "Theses & Dissertations", "count": 100  }
+  ],
+  "publications": [
+    {
+      "id": 1,
+      "type": "Journal Article",
+      "typeColor": "#4caf50",
+      "year": "2024",
+      "title": "Adaptive mRNA Delivery via Lipid Nanoparticle Engineering for Pandemic Preparedness",
+      "authors": "Vasquez E., Chen L., Abubakar M., et al.",
+      "journal": "Nature Biotechnology",
+      "doi": "10.1038/s41587-024-00123-4",
+      "tags": ["Biomedical", "Vaccine", "Nanotechnology"],
+      "citations": 142,
+      "featured": true
+    },
+    {
+      "id": 2,
+      "type": "Journal Article",
+      "typeColor": "#4caf50",
+      "year": "2024",
+      "title": "Fairness Constraints in Large-Scale Recommendation Systems: A Causal Approach",
+      "authors": "Kwon D., Patel R., Morrison A.",
+      "journal": "NeurIPS 2024 Proceedings",
+      "doi": "10.48550/arXiv.2411.05821",
+      "tags": ["AI", "Ethics", "ML"],
+      "citations": 88,
+      "featured": true
+    },
+    {
+      "id": 3,
+      "type": "Conference Paper",
+      "typeColor": "#c8a84b",
+      "year": "2024",
+      "title": "Urban Forest Carbon Accounting Using LiDAR-Enhanced Satellite Imagery",
+      "authors": "Diallo A., Nguyen T., Ferreira C.",
+      "journal": "ICCV 2024",
+      "doi": "10.1109/ICCV2024.456789",
+      "tags": ["Climate", "Remote Sensing", "GIS"],
+      "citations": 51,
+      "featured": false
+    },
+    {
+      "id": 4,
+      "type": "Journal Article",
+      "typeColor": "#4caf50",
+      "year": "2023",
+      "title": "Behavioral Economics of Climate Policy Compliance in Emerging Economies",
+      "authors": "Okonkwo B., Lindqvist P.",
+      "journal": "American Economic Review",
+      "doi": "10.1257/aer.20230456",
+      "tags": ["Economics", "Climate", "Policy"],
+      "citations": 214,
+      "featured": false
+    },
+    {
+      "id": 5,
+      "type": "Book Chapter",
+      "typeColor": "#1a2e5a",
+      "year": "2023",
+      "title": "Decolonizing the Digital Humanities: New Frameworks for Archival Justice",
+      "authors": "Hassan N., Rivera M., Takahashi Y.",
+      "journal": "Oxford Handbook of Digital Humanities (2nd ed.)",
+      "doi": "10.1093/oxfordhb/9780198862444.013.22",
+      "tags": ["Humanities", "Digital", "Culture"],
+      "citations": 67,
+      "featured": false
+    },
+    {
+      "id": 6,
+      "type": "Technical Report",
+      "typeColor": "#94a3b8",
+      "year": "2024",
+      "title": "Structural Integrity Assessment of Carbon-Fibre Reinforced Concrete in Seismic Zones",
+      "authors": "Zhang W., Osei K., Müller H.",
+      "journal": "KU Engineering Research Reports, Vol. 14",
+      "doi": "10.21203/ku.er.2024.14.022",
+      "tags": ["Engineering", "Materials", "Structures"],
+      "citations": 29,
+      "featured": false
+    }
+  ],
+  "topJournals": [
+    { "name": "Nature Biotechnology",      "impact": "IF 46.9" },
+    { "name": "Science",                   "impact": "IF 56.9" },
+    { "name": "NeurIPS Proceedings",       "impact": "Top-tier CS" },
+    { "name": "American Economic Review",  "impact": "IF 24.5" },
+    { "name": "Lancet",                    "impact": "IF 98.4" },
+    { "name": "IEEE Transactions",         "impact": "IF 11.8" }
+  ]
+}

@@ -129,7 +129,7 @@ const navItems: NavItem[] = [
     children: [
       { label: "Latest News",    href: "/news" },
       { label: "Blog",           href: "/blogs" },
-      { label: "Press Releases", href: "/news" },
+      { label: "Press Releases", href: "/press-releases" },
     ],
   },
   {
