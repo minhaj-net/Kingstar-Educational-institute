@@ -27,161 +27,161 @@ export const metadata: Metadata = {
 // ─── Static Data ──────────────────────────────────────────────────────────────
 
 const stats = [
-  { value: "94%", label: "Job Placement Rate", icon: TrendingUp },
-  { value: "1,200+", label: "Employer Partners", icon: Building2 },
-  { value: "3,800+", label: "Students Placed Yearly", icon: Users },
-  { value: "$68K", label: "Average Starting Salary", icon: Award },
+  { value: "88%", label: "Graduate Employment Rate", icon: TrendingUp },
+  { value: "320+", label: "Recruiting Organizations", icon: Building2 },
+  { value: "2,400+", label: "Students Placed (2024)", icon: Users },
+  { value: "48K", label: "Avg. Starting Salary (BDT/mo)", icon: Award },
 ];
 
 const services = [
   {
     icon: Search,
-    title: "Job & Internship Search",
+    title: "Job & Internship Portal",
     description:
-      "Access thousands of curated job and internship postings from top employers across every industry through our exclusive KU Careers portal.",
+      "Access curated job and internship listings from 320+ partner organizations including local corporations, NGOs, development agencies, and multinational firms operating in Bangladesh.",
     color: "#4caf50",
   },
   {
     icon: BookOpen,
-    title: "Resume & Cover Letter",
+    title: "CV & Cover Letter Clinic",
     description:
-      "One-on-one coaching sessions with our career advisors to craft standout resumes and compelling cover letters tailored to your dream role.",
+      "Individual coaching with career counselors to build professional CVs and cover letters aligned with industry expectations in Bangladesh and abroad.",
     color: "#1a2e5a",
   },
   {
     icon: Users,
     title: "Mock Interviews",
     description:
-      "Practice interviews with industry professionals and receive real-time feedback to help you walk into any interview room with confidence.",
+      "Structured practice interviews conducted by HR professionals and industry practitioners to help students build confidence and sharpen their communication skills.",
     color: "#c8a84b",
   },
   {
     icon: Handshake,
-    title: "Employer Networking",
+    title: "Industry Networking",
     description:
-      "Connect with hiring managers and alumni through our exclusive networking events, career fairs, and employer info sessions held throughout the year.",
+      "Regular industry connect sessions, alumni talks, and employer information sessions to help students build professional networks before graduation.",
     color: "#4caf50",
   },
   {
     icon: GraduationCap,
-    title: "Graduate School Prep",
+    title: "Higher Study Advising",
     description:
-      "Guidance on graduate school applications, personal statements, entrance exams, and connecting with faculty for strong recommendations.",
+      "Guidance on postgraduate applications, scholarship opportunities, IELTS/GRE preparation, and connecting with faculty for recommendation letters.",
     color: "#1a2e5a",
   },
   {
     icon: TrendingUp,
-    title: "Professional Development",
+    title: "Skill Development Programs",
     description:
-      "Workshops, certifications, and leadership programs designed to build the professional skills employers demand most in today's market.",
+      "Short courses, workshops, and certification programs in leadership, communication, digital literacy, and entrepreneurship to enhance employability.",
     color: "#c8a84b",
   },
 ];
 
 const jobListings = [
   {
-    title: "Financial Analyst",
-    company: "Goldman Sachs",
-    location: "New York, NY",
-    type: "Full-time",
-    department: "Finance",
+    title: "Lecturer, Department of Computer Science",
+    company: "Kingster University",
+    location: "Dhaka, Bangladesh",
+    type: "Faculty",
+    department: "Computer Science & Engineering",
     posted: "2 days ago",
   },
   {
-    title: "Software Engineer Intern",
-    company: "Google",
-    location: "Mountain View, CA",
-    type: "Internship",
-    department: "Technology",
-    posted: "1 day ago",
-  },
-  {
-    title: "Marketing Coordinator",
-    company: "Nike",
-    location: "Portland, OR",
-    type: "Full-time",
-    department: "Marketing",
-    posted: "3 days ago",
-  },
-  {
-    title: "Research Associate",
-    company: "Pfizer",
-    location: "Boston, MA",
-    type: "Full-time",
-    department: "Research",
-    posted: "5 days ago",
-  },
-  {
-    title: "UX Design Intern",
-    company: "Apple",
-    location: "Cupertino, CA",
-    type: "Internship",
-    department: "Design",
+    title: "Research Assistant — Biomedical Lab",
+    company: "Kingster University",
+    location: "Dhaka, Bangladesh",
+    type: "Research",
+    department: "School of Medicine",
     posted: "1 week ago",
   },
   {
-    title: "Business Development Rep",
-    company: "Salesforce",
-    location: "San Francisco, CA",
+    title: "Management Trainee",
+    company: "BRAC Bank Limited",
+    location: "Dhaka, Bangladesh",
     type: "Full-time",
-    department: "Business",
+    department: "Banking & Finance",
+    posted: "3 days ago",
+  },
+  {
+    title: "Business Analyst Intern",
+    company: "Grameenphone",
+    location: "Dhaka, Bangladesh",
+    type: "Internship",
+    department: "Business & Strategy",
+    posted: "5 days ago",
+  },
+  {
+    title: "Junior Software Engineer",
+    company: "Brain Station 23",
+    location: "Dhaka, Bangladesh",
+    type: "Full-time",
+    department: "Software Engineering",
+    posted: "2 days ago",
+  },
+  {
+    title: "Program Associate",
+    company: "UNDP Bangladesh",
+    location: "Dhaka, Bangladesh",
+    type: "Full-time",
+    department: "Development & Policy",
     posted: "4 days ago",
   },
 ];
 
 const upcomingEvents = [
   {
-    date: { day: "14", month: "JUL" },
-    title: "Summer Career Fair 2025",
-    desc: "Meet 80+ employers across Finance, Tech, Healthcare & more.",
-    location: "Main Campus — Hall A",
+    date: { day: "15", month: "JUL" },
+    title: "Annual Career Fair 2025",
+    desc: "Meet 60+ recruiters from top corporations, NGOs, and government agencies.",
+    location: "KU Auditorium — Main Campus",
   },
   {
-    date: { day: "21", month: "JUL" },
-    title: "Resume Workshop",
-    desc: "Live coaching session with certified career advisors.",
+    date: { day: "22", month: "JUL" },
+    title: "CV Writing Workshop",
+    desc: "Hands-on workshop with HR professionals from leading Bangladeshi firms.",
     location: "Career Center, Room 204",
   },
   {
-    date: { day: "28", month: "JUL" },
-    title: "Mock Interview Day",
-    desc: "Back-to-back 30-min sessions with industry recruiters.",
-    location: "Business School — B Wing",
+    date: { day: "30", month: "JUL" },
+    title: "Alumni Talk: Life After KU",
+    desc: "Successful KU graduates share their journeys across industries.",
+    location: "Seminar Hall — Academic Block B",
   },
 ];
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    role: "Software Engineer at Google",
+    name: "Tasnim Rahman",
+    role: "Software Engineer, Pathao",
     year: "Class of 2023",
     quote:
-      "The career center helped me refine my resume and prep for technical interviews. I landed my dream job at Google within 3 months of graduation.",
+      "The career center's mock interview sessions and CV clinic gave me the confidence I needed. I got placed at Pathao within two months of graduation.",
     rating: 5,
   },
   {
-    name: "James Okafor",
-    role: "Investment Analyst at JPMorgan",
+    name: "Rafiqul Islam",
+    role: "Credit Analyst, Dutch-Bangla Bank",
     year: "Class of 2022",
     quote:
-      "The networking events they organized were invaluable. I met my hiring manager at a KU career fair and got an offer on the spot.",
+      "The annual career fair directly connected me with my current employer. The preparation workshops made all the difference in standing out during interviews.",
     rating: 5,
   },
   {
-    name: "Priya Sharma",
-    role: "Product Manager at Microsoft",
+    name: "Nusrat Jahan",
+    role: "Program Officer, BRAC",
     year: "Class of 2024",
     quote:
-      "From mock interviews to salary negotiation coaching — the career team supported me every step of the way. Couldn't be more grateful.",
+      "Career Services helped me pivot from corporate to the development sector. The advisors understood my goals and connected me with the right opportunities.",
     rating: 5,
   },
 ];
 
 const steps = [
-  { step: "01", title: "Create Your Profile", desc: "Sign up on KU Careers portal and complete your professional profile." },
-  { step: "02", title: "Meet Your Advisor", desc: "Book a free one-on-one session with a dedicated career advisor." },
-  { step: "03", title: "Explore Opportunities", desc: "Browse job listings, internships, and upcoming career events." },
-  { step: "04", title: "Apply & Get Hired", desc: "Submit applications with our support and land your ideal role." },
+  { step: "01", title: "Register on KU Careers", desc: "Create your profile on the KU Careers portal with your academic and professional details." },
+  { step: "02", title: "Meet a Career Advisor", desc: "Book a free consultation session with a dedicated career counselor." },
+  { step: "03", title: "Attend Events & Fairs", desc: "Participate in career fairs, industry talks, and networking sessions." },
+  { step: "04", title: "Apply & Get Placed", desc: "Apply to curated openings with our support and secure your ideal position." },
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -235,16 +235,17 @@ export default function CareerPage() {
               </h2>
               <p className="text-gray-500 leading-relaxed">
                 Kingster University&apos;s Career Services Center is dedicated to empowering students and
-                alumni at every stage of their professional journey. From your first internship to
-                executive-level roles, we provide the tools, connections, and guidance you need to thrive.
+                alumni at every stage of their professional journey. From securing your first internship
+                to landing a faculty position or joining a top organization — we provide the tools,
+                connections, and guidance you need to thrive in Bangladesh and globally.
               </p>
               <ul className="space-y-3">
                 {[
-                  "Personalized one-on-one career coaching",
-                  "Access to 1,200+ employer partnerships",
-                  "Year-round career fairs and networking events",
-                  "Online job board updated daily",
-                  "Alumni mentorship program",
+                  "Personalized one-on-one career counseling",
+                  "Access to 320+ partner organizations & employers",
+                  "Semester-wise career fairs and industry connect sessions",
+                  "KU Careers online job board updated regularly",
+                  "Alumni mentorship and networking program",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-[#4caf50] flex-shrink-0 mt-0.5" />
@@ -268,16 +269,16 @@ export default function CareerPage() {
                 </div>
                 <div className="rounded-xl overflow-hidden h-32 bg-[#1a2e5a] flex items-center justify-center">
                   <div className="text-center text-white px-4">
-                    <p className="text-3xl font-bold">94%</p>
-                    <p className="text-xs text-white/70 mt-1">Placement Rate</p>
+                    <p className="text-3xl font-bold">88%</p>
+                    <p className="text-xs text-white/70 mt-1">Employment Rate</p>
                   </div>
                 </div>
               </div>
               <div className="space-y-4 pt-8">
                 <div className="rounded-xl overflow-hidden h-32 bg-[#4caf50] flex items-center justify-center">
                   <div className="text-center text-white px-4">
-                    <p className="text-3xl font-bold">1,200+</p>
-                    <p className="text-xs text-white/80 mt-1">Employer Partners</p>
+                    <p className="text-3xl font-bold">320+</p>
+                    <p className="text-xs text-white/80 mt-1">Partner Organizations</p>
                   </div>
                 </div>
                 <div className="rounded-xl overflow-hidden h-48 bg-gray-100">
@@ -536,7 +537,7 @@ export default function CareerPage() {
             Ready to Launch Your Career?
           </h2>
           <p className="text-white/85 text-lg mb-10 leading-relaxed">
-            Book a free session with a career advisor today and take the first step
+            Book a free session with a career counselor today and take the first step
             toward your professional future.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

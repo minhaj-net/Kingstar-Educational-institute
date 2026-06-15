@@ -26,6 +26,7 @@ import {
   MapPin,
   FlaskConical,
   Microscope,
+  Bell,
 } from "lucide-react";
 import { useThemeStore } from "@/store/themeStore";
 
@@ -173,6 +174,15 @@ const navGroups: NavGroup[] = [
         ],
       },
       {
+        label: "Announcements",
+        href: "/admin/announcements",
+        icon: Bell,
+        children: [
+          { label: "All Announcements", href: "/admin/announcements",       icon: Bell },
+          { label: "Add Announcement",  href: "/admin/announcements/add",   icon: FileText },
+        ],
+      },
+      {
         label: "Gallery",
         href: "/admin/gallery",
         icon: Image,
@@ -243,6 +253,16 @@ const navGroups: NavGroup[] = [
           { label: "All Labs",       href: "/admin/research/labs-centers",            icon: Microscope },
           { label: "Add Lab",        href: "/admin/research/labs-centers/add-lab",    icon: FileText },
         ],
+      },
+    ],
+  },
+  {
+    group: "Career",
+    items: [
+      {
+        label: "Career Services",
+        href: "/admin/career",
+        icon: Briefcase,
       },
     ],
   },

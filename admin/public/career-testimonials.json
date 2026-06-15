@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Tasnim Rahman",
+    "role": "Software Engineer, Pathao",
+    "year": "Class of 2023",
+    "quote": "The career center's mock interview sessions and CV clinic gave me the confidence I needed. I got placed at Pathao within two months of graduation.",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Rafiqul Islam",
+    "role": "Credit Analyst, Dutch-Bangla Bank",
+    "year": "Class of 2022",
+    "quote": "The annual career fair directly connected me with my current employer. The preparation workshops made all the difference in standing out during interviews.",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "name": "Nusrat Jahan",
+    "role": "Program Officer, BRAC",
+    "year": "Class of 2024",
+    "quote": "Career Services helped me pivot from corporate to the development sector. The advisors understood my goals and connected me with the right opportunities.",
+    "rating": 5
+  }
+]

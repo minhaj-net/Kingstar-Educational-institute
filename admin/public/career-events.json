@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "day": "15",
+    "month": "JUL",
+    "title": "Annual Career Fair 2025",
+    "desc": "Meet 60+ recruiters from top corporations, NGOs, and government agencies.",
+    "location": "KU Auditorium — Main Campus"
+  },
+  {
+    "id": 2,
+    "day": "22",
+    "month": "JUL",
+    "title": "CV Writing Workshop",
+    "desc": "Hands-on workshop with HR professionals from leading Bangladeshi firms.",
+    "location": "Career Center, Room 204"
+  },
+  {
+    "id": 3,
+    "day": "30",
+    "month": "JUL",
+    "title": "Alumni Talk: Life After KU",
+    "desc": "Successful KU graduates share their journeys across industries.",
+    "location": "Seminar Hall — Academic Block B"
+  }
+]

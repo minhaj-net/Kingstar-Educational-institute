@@ -88,7 +88,7 @@ export default function ApplyHero() {
           alt="Apply to Kingster University"
           fill
           className="object-cover object-center"
-          preload
+          priority
         />
       </div>
 

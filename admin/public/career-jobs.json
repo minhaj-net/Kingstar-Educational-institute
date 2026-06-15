@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Lecturer, Department of Computer Science",
+    "company": "Kingster University",
+    "location": "Dhaka, Bangladesh",
+    "type": "Faculty",
+    "department": "Computer Science & Engineering",
+    "posted": "2 days ago"
+  },
+  {
+    "id": 2,
+    "title": "Research Assistant — Biomedical Lab",
+    "company": "Kingster University",
+    "location": "Dhaka, Bangladesh",
+    "type": "Research",
+    "department": "School of Medicine",
+    "posted": "1 week ago"
+  },
+  {
+    "id": 3,
+    "title": "Management Trainee",
+    "company": "BRAC Bank Limited",
+    "location": "Dhaka, Bangladesh",
+    "type": "Full-time",
+    "department": "Banking & Finance",
+    "posted": "3 days ago"
+  },
+  {
+    "id": 4,
+    "title": "Business Analyst Intern",
+    "company": "Grameenphone",
+    "location": "Dhaka, Bangladesh",
+    "type": "Internship",
+    "department": "Business & Strategy",
+    "posted": "5 days ago"
+  },
+  {
+    "id": 5,
+    "title": "Junior Software Engineer",
+    "company": "Brain Station 23",
+    "location": "Dhaka, Bangladesh",
+    "type": "Full-time",
+    "department": "Software Engineering",
+    "posted": "2 days ago"
+  },
+  {
+    "id": 6,
+    "title": "Program Associate",
+    "company": "UNDP Bangladesh",
+    "location": "Dhaka, Bangladesh",
+    "type": "Full-time",
+    "department": "Development & Policy",
+    "posted": "4 days ago"
+  }
+]
