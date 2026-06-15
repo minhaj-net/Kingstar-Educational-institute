@@ -257,6 +257,16 @@ const navGroups: NavGroup[] = [
     ],
   },
   {
+    group: "Admissions",
+    items: [
+      {
+        label: "Apply Now Page",
+        href: "/admin/apply-now",
+        icon: FileText,
+      },
+    ],
+  },
+  {
     group: "Career",
     items: [
       {

@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "eyebrow": "Admission",
+    "title": "Apply To Kingster",
+    "backgroundImage": "/slide-3.jpg"
+  },
+  "detail": {
+    "heading": "Detail About How To Apply",
+    "breadcrumbLabel": "Apply To Kingster",
+    "col1": "If you would like to study in the university in the heart of the city that focus on chaning the world for better to morrow, you're choosin the right place. We do not use special formulas to select students. We look at every single applicant's application, academic and personal, to select students who suit to our community with a full range of backgrounds. If you would like to study in the university in the heart of the city.",
+    "col2": "If you would like to study in the university in the heart of the city that focus on chaning the world for better to morrow, you're choosin the right place. We do not use special formulas to select students. We look at every single applicant's application, academic and personal, to select students who suit to our community."
+  },
+  "services": {
+    "backgroundImage": "/slide-3.jpg",
+    "items": [
+      {
+        "icon": "BookOpen",
+        "title": "Education Services",
+        "body": "Kingster University was established by John Smith in 1920 for the public benefit and it is recognized."
+      },
+      {
+        "icon": "Globe",
+        "title": "International Hubs",
+        "body": "Kingster University was established by John Smith in 1920 for the public benefit and it is recognized."
+      },
+      {
+        "icon": "GraduationCap",
+        "title": "Bachelor's and Master's",
+        "body": "Kingster University was established by John Smith in 1920 for the public benefit and it is recognized."
+      },
+      {
+        "icon": "Building2",
+        "title": "University Life",
+        "body": "Kingster University was established by John Smith in 1920 for the public benefit and it is recognized."
+      }
+    ]
+  },
+  "process": {
+    "heading": "The Application Process",
+    "steps": [
+      {
+        "num": 1,
+        "title": "Start Online Submission",
+        "body": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence."
+      },
+      {
+        "num": 2,
+        "title": "Submit The Form",
+        "body": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence."
+      },
+      {
+        "num": 3,
+        "title": "Review The Submission",
+        "body": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence."
+      },
+      {
+        "num": 4,
+        "title": "Gather Necessary Documents",
+        "body": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence."
+      },
+      {
+        "num": 5,
+        "title": "Interviewing Process",
+        "body": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence."
+      },
+      {
+        "num": 6,
+        "title": "Last Decision",
+        "body": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence."
+      }
+    ]
+  },
+  "admissionInfo": {
+    "thingsToKnow": {
+      "heading": "Things To Know First",
+      "intro": "The Common Application is required for students applying to any or all of KU's three degree. You'll be able to choose your campus and programs that you are interested in.",
+      "requirementsLabel": "You will need :",
+      "requirements": [
+        "Contact information for the counselor or other school representative who will complete your Common Application School Report and submit your official high school transcript.",
+        "Contact information for one teacher (or two, maximum) who will complete the Teacher Evaluation form.",
+        "Nonrefundable $50 application fee. Students who are unable to pay the application fee can request a fee waiver."
+      ],
+      "btn1": "Request a campus tour",
+      "btn2": "Request information"
+    },
+    "whenToApply": {
+      "heading": "When To Apply?",
+      "tableHeaders": ["Application Deadline", "Decision"],
+      "deadlines": [
+        { "type": "Early Decision 1", "application": "November 1", "decision": "December 15" },
+        { "type": "Early Decision 2", "application": "January 1",  "decision": "February 15" },
+        { "type": "Regular Decision", "application": "January 1",  "decision": "April 1"     }
+      ]
+    },
+    "whereToSubmit": {
+      "heading": "Where to submit necessary documents?",
+      "intro": "Documents not submitted through the online method can be mailed to:",
+      "address": "Box 35300\n1810 Campus Way NE\nBothell, WA 98011-8246 USA"
+    }
+  }
+}
